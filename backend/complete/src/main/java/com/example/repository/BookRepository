@@ -1,0 +1,10 @@
+package com.book_library
+
+import com.book_library;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+//QUERIES an Datenbank schicken können. dafür sind hier Methoden drinnen
+
+public interface BookRepository extends JpaRepository <Book, Integer>{
+// Int : Id Datentyp
+}
