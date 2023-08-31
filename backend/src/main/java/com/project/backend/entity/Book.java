@@ -1,4 +1,6 @@
 package com.project.backend.entity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 import jakarta.persistence.*;
 
 @Entity

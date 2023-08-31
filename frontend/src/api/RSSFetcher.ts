@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 
-//google: map tsX = X makiert die datei als react komp. warum return ganz am anfang einer react componente?
-//Promise: Async. Prozess. Warteschlange.
 
 function RSSFetcher() {
     //[] => destruktor 
@@ -14,12 +12,15 @@ function RSSFetcher() {
         }
         pubDate: string
     }
+    
     const [data, setData] = useState<Data[]>([])
 
     useEffect(() => {
 
 
-        fetch("/testfeed.xml")
+        fetch("/testfeed.xml",{
+            method: "post"
+        })
 
             .then((response) => response.text())
             .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
