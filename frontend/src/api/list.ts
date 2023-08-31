@@ -8,7 +8,7 @@ function listBooks() {
         title: string,
         author: string
         isbn: string,
-        pubDate: number
+        pubYear: number
     }
     const [data, setData] = useState<Data[]>([])
 
@@ -27,8 +27,6 @@ function listBooks() {
     //Das Leeres array hier in React = führe es nur einmal aus(hooks)
     return data;
 
-    
+
 }
 export default listBooks;
-
-

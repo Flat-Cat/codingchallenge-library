@@ -6,21 +6,19 @@ import React, { useEffect } from "react";
 
 import getBook from "../api/get";
 
-function Articles() {
+// function Articles() {
 
 
-    const data = getBook();
-    const onClick = () => {
-        //    listBooks()
-        console.log(data);
-    }
+//     const data = getBook();
+//     const onClick = () => {
+//         //    listBooks()
+//         console.log(data);
+//     }
 
-    return (
-       <div></div>
+//     return (
 
+// <div></div>
+//     )
+// }
 
-
-    )
-}
-
-export default Articles
+// export default Articles
