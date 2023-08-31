@@ -37,7 +37,6 @@ function Home() {
                             <td>{item.pubYear}</td>
                             <td>{item.isbn}</td> 
                         </tr>
-                        
                         ))}
                     </tbody>
                 </table>
