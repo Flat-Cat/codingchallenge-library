@@ -1,23 +1,12 @@
 import listBooks from "../api/list";
+import { useParams } from "react-router-dom";
 
 function Home() {
-    
-    const data = listBooks();
-    // const onClick = () => {
 
-    //     console.log(data);
-    // }
+    const data = listBooks();
 
     return (
-        <>
-        <div>
-            {/* <button
-                className="button is-primary"
-                onClick={onClick}>
-                Get all Books
-            </button> */}
-
-        </div><div className="container">
+            <div className="container">
                 <table className="table">
                     <thead>
                         <tr>
@@ -29,21 +18,18 @@ function Home() {
                         </tr>
                     </thead>
                     <tbody>
-                        {data.map(item => (
-                        <tr>
-                            <td>{item.id}</td>
-                            <td>{item.title}</td>
-                            <td>{item.author}</td>
-                            <td>{item.pubYear}</td>
-                            <td>{item.isbn}</td> 
-                        </tr>
+                        {data.map((item, index) => (
+                            <tr key={index}>
+                                <td>{item.id}</td>
+                                <td>{item.title}</td>
+                                <td>{item.author}</td>
+                                <td>{item.pubYear}</td>
+                                <td>{item.isbn}</td>
+                            </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
-        </>
-
-
     )
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 //Hier musst du evtl Link hinzufügen
-function listBooks() {
+function getBook() {
     //[] => destruktor
     //interface: def.wie ein obj.aussieht 
     interface Data {
@@ -25,7 +25,8 @@ function listBooks() {
                 // DATA: Leeres array (in der die formatierten Dateien der Arrays Iteriert wurde)
             })
     }, []);
+
     //Das Leeres array hier in React = führe es nur einmal aus(hooks)
     return data;
 }
-export default listBooks;
+export default getBook;
