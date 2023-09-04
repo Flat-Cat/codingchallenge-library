@@ -14,14 +14,13 @@ function listBooks() {
     const [data, setData] = useState<Data[]>([])
 
     useEffect(() => {
-        fetch("http://localhost:8080/api/v1/books", {
+        fetch(`http://localhost:8080/api/v1/books`, {
             method: "get"
         })
             .then((response) => response.json())
             .then((data: Data[]) => {
 
                 setData(data)
-                console.log(data)
                 // DATA: Leeres array (in der die formatierten Dateien der Arrays Iteriert wurde)
             })
     }, []);

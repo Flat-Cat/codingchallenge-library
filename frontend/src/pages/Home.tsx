@@ -1,5 +1,5 @@
 import listBooks from "../api/list";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Home() {
 
@@ -21,7 +21,10 @@ function Home() {
                         {data.map((item, index) => (
                             <tr key={index}>
                                 <td>{item.id}</td>
-                                <td>{item.title}</td>
+                                <td>
+                                <Link to={`/books/${item.id}`}>{item.title}
+                                </Link>
+                                </td>
                                 <td>{item.author}</td>
                                 <td>{item.pubYear}</td>
                                 <td>{item.isbn}</td>

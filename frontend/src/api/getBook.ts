@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 //Hier musst du evtl Link hinzufügen
 function getBook() {
@@ -11,14 +12,22 @@ function getBook() {
         isbn: string,
         pubYear: number
     }
-    const [data, setData] = useState<Data[]>([])
+    const [data, setData] = useState<Data>({
+        id: 0,
+        title: "",
+        author: "",
+        isbn: "",
+        pubYear: 0
+    })
 
+    const { id } = useParams<{ id: string }>();
+    // ${} = Hier will ich eine var. benutzen
     useEffect(() => {
-        fetch("http://localhost:8080/api/v1/books", {
+        fetch(`http://localhost:8080/api/v1/books/${id}`, {
             method: "get"
         })
             .then((response) => response.json())
-            .then((data: Data[]) => {
+            .then((data: Data) => {
 
                 setData(data)
                 console.log(data)

@@ -24,15 +24,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1")
 public class BookController {
 
+static final String frontendOrigin = "http://localhost:5173/";
+
     @Autowired
     private BookRepository bookRepository;
 
-   @CrossOrigin(origins = "*", allowedHeaders = "*")
+    @CrossOrigin(origins = BookController.frontendOrigin) 
     @GetMapping("/books")
     public List < Book > getAllBooks() {
         return bookRepository.findAll();
     }
 
+    @CrossOrigin(origins = BookController.frontendOrigin) 
     @GetMapping("/books/{id}")
     public ResponseEntity < Book > getBookById(@PathVariable(value = "id") Long bookId )
             throws ResourceNotFoundException {
