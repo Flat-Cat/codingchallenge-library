@@ -21,7 +21,7 @@ function getBook() {
     })
 
     const { id } = useParams<{ id: string }>();
-    // ${} = Hier will ich eine var. benutzen
+// ${} = Hier will ich eine var. benutzen
     useEffect(() => {
         fetch(`http://localhost:8080/api/v1/books/${id}`, {
             method: "get"

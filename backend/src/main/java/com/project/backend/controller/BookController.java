@@ -43,6 +43,7 @@ static final String frontendOrigin = "http://localhost:5173/";
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found for this id :: " + bookId ));
         return ResponseEntity.ok().body(book);
     }
+     @CrossOrigin(origins = BookController.frontendOrigin)
     @PostMapping("/books")
     public Book createBook(@Valid @RequestBody Book book ) {
         return bookRepository.save(book);

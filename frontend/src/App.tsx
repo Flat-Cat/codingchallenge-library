@@ -1,7 +1,8 @@
 import './App.css'
 import Books from './pages/Books';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Routes, Route, useParams, } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
+import NewBook from './pages/NewBook';
 
 function App() {
 
@@ -12,7 +13,8 @@ function App() {
 
           <Route path="/" element={<Home />} />
           <Route path="/books/:id" element={<Books />} />
-
+          <Route path="/new" element={<NewBook />} />
+          
         </Routes>
       </Router>
     </div>
