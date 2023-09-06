@@ -1,35 +1,29 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-function CreateNewBook() {
+//ich nehme als Param. ein Obj mit diesen Eigenschaften an:
+export interface Data {
+    title: string,
+    author: string,
+    isbn: string,
+    pubYear: number
+}
+function SendNewBook(data: Data) {
 
-    interface Data {
-        title: string,
-        author: string,
-        isbn: string,
-        pubYear: number
-    }
-    const [data, setData] = useState<Data>({
-        title: "",
-        author: "",
-        isbn: "",
-        pubYear: 0
-    });
-
-    useEffect(() => {
         fetch(`http://localhost:8080/api/v1/books`, {
-            method: "post"
+            method: "post",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            },
         })
             .then(response => response.json())
-            .then(newData => {
-                setData(newData); // Hier sollte newData statt data verwendet werden
-                console.log(newData);
-            })
+             .then(newData => {
+
+                 console.log(newData);
+             })
             .catch(error => {
                 console.error("Fehler beim Abrufen der Daten:", error);
             });
-    }, [data]);
+        }
 
-    return data;
-}
-
-export default CreateNewBook;
+export default SendNewBook;

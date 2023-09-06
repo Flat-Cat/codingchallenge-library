@@ -3,7 +3,6 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 function Books() {
     const data = getBook();
-    let { id } = useParams();
 
     const navigate = useNavigate();
     const goBack = () => {
