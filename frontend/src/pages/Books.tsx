@@ -8,7 +8,10 @@ function Books() {
     const goBack = () => {
         navigate(-1)
     }
-
+     const changeBook = () => {
+        navigate(`/books/update/${data.id}`)
+     }
+   
     return (
         <div>
             <div className="subtitle is-4 has-text-left">Id: {data.id}</div>
@@ -18,9 +21,14 @@ function Books() {
             <div className="subtitle is-4 has-text-left">ISBN: {data.isbn}</div>
 
             <button 
-            className=" button is-link is-light is-pulled-left"
+            className=" button is-link is-light is-pulled-left  mr-6 mt-6"
             onClick= {goBack}>Back
             </button>
+            
+            <button className=" button is-link is-pulled-left  mr-6 mt-6" onClick={changeBook}> Change Book
+            </button>
+            
+                               
         </div>
     )
 }

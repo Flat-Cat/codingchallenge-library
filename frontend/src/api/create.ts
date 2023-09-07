@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 
 //ich nehme als Param. ein Obj mit diesen Eigenschaften an:
 export interface Data {
@@ -9,7 +8,7 @@ export interface Data {
 }
 function SendNewBook(data: Data) {
 
-        fetch(`http://localhost:8080/api/v1/books`, {
+        return fetch(`http://localhost:8080/api/v1/books`, {
             method: "post",
             body: JSON.stringify(data),
             headers: {
