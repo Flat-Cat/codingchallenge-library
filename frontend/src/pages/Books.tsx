@@ -1,8 +1,22 @@
 import getBook from '../api/getBook';
 import { useNavigate, useParams } from 'react-router-dom'
-
+import { useState } from 'react';
+import { BookData } from '../api/BookData';
 function Books() {
-    const data = getBook();
+
+     const [data, setData] = useState<BookData>({
+         id: 0,
+         title: "",
+         author: "",
+         isbn: "",
+         pubYear: 0
+     })
+
+     const { id } = useParams<{ id: string }>();
+//xNEW
+    getBook(id).then (data => {
+        setData(data)
+    })
 
     const navigate = useNavigate();
     const goBack = () => {

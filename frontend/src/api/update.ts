@@ -1,41 +1,27 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
+import { BookData } from "./BookData";
 
-//Hier musst du evtl Link hinzufügen
-function update() {
-    //[] => destruktor
-    //interface: def.wie ein obj.aussieht 
-    interface Data {
-        id: number,
-        title: string,
-        author: string
-        isbn: string,
-        pubYear: number
-    }
-    const [data, setData] = useState<Data>({
-        id: 0,
-        title: "",
-        author: "",
-        isbn: "",
-        pubYear: 0
-    })
+const { id } = useParams<{ id: string }>();
 
-    const { id } = useParams<{ id: string }>();
-// ${} = Hier will ich eine var. benutzen
-    useEffect(() => {
-        fetch(`http://localhost:8080/api/v1/books/${id}`, {
-            method: "put"
+function SendNewBook(data: BookData) {
+
+        return fetch(`http://localhost:8080/api/v1/books/${id}`, {
+            method: "put",
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            },
         })
-            .then((response) => response.json())
-            .then((data: Data) => {
+            .then(response => response.json())
+             .then((newUpdatedData : BookData) => {
+                //XNEW:
+                return newUpdatedData;
+               
+             })
+            .catch(error => {
+                console.error ("Fehler beim Abrufen der Daten:", error);
+               return false;
+            });
+        }
 
-                setData(data)
-                console.log(data)
-                // DATA: Leeres array (in der die formatierten Dateien der Arrays Iteriert wurde)
-            })
-    }, []);
-
-    //Das Leeres array hier in React = führe es nur einmal aus(hooks)
-    return data;
-}
-export default update;
+export default SendNewBook;
