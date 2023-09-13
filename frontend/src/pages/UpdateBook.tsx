@@ -77,11 +77,12 @@ function UpdateBook() {
                     type="text"
                     value={data.isbn}
                 />
-                <button className="button is-link is-pulled-left mr-6 mt-6">Change Book</button>
+                <button className="button is-link is-pulled-left mr-6 mt-6">Change Book
+                </button>
+                
             </form>
-            <button
-                className=" button is-link is-light is-pulled-left mr-6 mt-6"
-                onClick={goBack}>Back
+
+            <button className=" button is-link is-light is-pulled-left mr-6 mt-6" onClick={goBack}>Back
             </button>
         </div>
     )

@@ -10,8 +10,7 @@ function get(id:string | undefined) {
             .then((response) => response.json())
             .then((data: BookData) => {
 
-                return data;
-                
+                return data;  
         }
     )
 }
