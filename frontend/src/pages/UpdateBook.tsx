@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
-import getBook from '../api/getBook';
+import get from '../api/get';
 import { BookData } from '../api/BookData';
 import sendUpdatedBook from '../api/update';
 
@@ -16,7 +16,7 @@ function UpdateBook() {
     const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
-        getBook(id).then((modifiedBookData) => {
+        get(id).then((modifiedBookData) => {
             setData(modifiedBookData);
             return '';
         }).catch(() => {
@@ -28,16 +28,16 @@ function UpdateBook() {
         formEvent.preventDefault()
 
         if (id) {
-            sendUpdatedBook(id, data).then (() => {
+            sendUpdatedBook(id, data).then(() => {
                 navigate(`/books/${id}`);
-            })        
+            })
         } else {
             console.log("id is Undefined")
         }
     };
     const navigate = useNavigate();
     const goBack = () => {
-        navigate(`/books/${id}`)
+        navigate(`/`)
     }
     const inputHandler = function (e: ChangeEvent<HTMLInputElement>) {
 
@@ -77,7 +77,7 @@ function UpdateBook() {
                     type="text"
                     value={data.isbn}
                 />
-                <button className="button is-link is-light is-pulled-left mr-6 mt-6" type="submit">Change Book</button>
+                <button className="button is-link is-pulled-left mr-6 mt-6">Change Book</button>
             </form>
             <button
                 className=" button is-link is-light is-pulled-left mr-6 mt-6"

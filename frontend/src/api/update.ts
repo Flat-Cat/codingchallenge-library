@@ -1,10 +1,6 @@
 import { BookData } from './BookData';
-import UpdateBook from '../pages/UpdateBook';
 
 //if(!Data.id) throw Error ("ID is missing");
-
-//let id = UpdateBook();
-
 function sendUpdatedBook(id:string, data: BookData) {
 
     console.log("ID-Wert:",);
@@ -20,14 +16,11 @@ function sendUpdatedBook(id:string, data: BookData) {
              .then((modifiedBookData : BookData) => {
 
                 return modifiedBookData;
-               
              })
             .catch(error => {
                 
                 console.error ("Fehler beim Abrufen der Daten:", error);
                return false;
-               
             });
         }
-
 export default sendUpdatedBook;

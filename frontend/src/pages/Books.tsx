@@ -1,7 +1,8 @@
-import getBook from '../api/getBook';
+import get from '../api/get';
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState } from 'react';
 import { BookData } from '../api/BookData';
+
 function Books() {
 
      const [data, setData] = useState<BookData>({
@@ -14,13 +15,13 @@ function Books() {
 
      const { id } = useParams<{ id: string }>();
 //xNEW
-    getBook(id).then (data => {
+    get(id).then (data => {
         setData(data)
     })
 
     const navigate = useNavigate();
     const goBack = () => {
-        navigate(-1)
+        navigate("/")
     }
      const changeBook = () => {
         navigate(`/books/update/${data.id}`)
@@ -41,6 +42,8 @@ function Books() {
             
             <button className=" button is-link is-pulled-left  mr-6 mt-6" onClick={changeBook}> Change Book
             </button>
+
+            <button className="delete is-large" name="deleteButton"></button>
             
                                
         </div>
