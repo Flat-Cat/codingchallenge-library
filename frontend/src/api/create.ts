@@ -6,6 +6,7 @@ export interface Data {
     isbn: string,
     pubYear: number
 }
+//klein schreiben wenn kein obj zurück gegeben wird oder wenn etwas inz. wird. GOOGLE
 function SendNewBook(data: Data) {
 
         return fetch(`http://localhost:8080/api/v1/books`, {

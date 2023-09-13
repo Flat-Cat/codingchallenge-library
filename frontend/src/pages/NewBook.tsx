@@ -40,8 +40,8 @@ function NewBook() {
                 <input className="input is-link" name="pubYear" type="number" placeholder="Publication Year"></input>
                 <input className="input is-link" name="isbn" type="text" placeholder="ISBN"></input>
 
-                <button className="button is-link is-light is-pulled-left mr-6 mt-6" type="submit">Create</button>
-                <button className="button is-link is-danger is-pulled-left mr-6 mt-6" onClick={handleClick} type="button">go Back</button>
+                <button className="button is-link is-pulled-left mr-6 mt-6" type="submit">Create</button>
+                <button className="button is-link is-light is-pulled-left mr-6 mt-6" onClick={handleClick} type="button">Back</button>
 
             </form>
         </div>

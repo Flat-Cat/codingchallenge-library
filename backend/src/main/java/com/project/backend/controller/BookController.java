@@ -43,12 +43,12 @@ static final String frontendOrigin = "http://localhost:5173/";
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found for this id :: " + bookId ));
         return ResponseEntity.ok().body(book);
     }
-     @CrossOrigin(origins = BookController.frontendOrigin)
+    @CrossOrigin(origins = BookController.frontendOrigin)
     @PostMapping("/books")
     public Book createBook(@Valid @RequestBody Book book ) {
         return bookRepository.save(book);
     }
-
+    @CrossOrigin(origins = BookController.frontendOrigin)
     @PutMapping("/books/{id}")
     public ResponseEntity < Book > updateBook(@PathVariable(value = "id") Long bookId,
                                               @Valid @RequestBody Book bookDetails) throws ResourceNotFoundException {
@@ -62,7 +62,7 @@ static final String frontendOrigin = "http://localhost:5173/";
         final Book updatedBook = bookRepository.save(book);
         return ResponseEntity.ok(updatedBook);
     }
-
+    @CrossOrigin(origins = BookController.frontendOrigin)
     @DeleteMapping("/books/{id}")
     public Map < String, Boolean > deleteBook(@PathVariable(value = "id") Long bookId)
             throws ResourceNotFoundException {
