@@ -3,7 +3,7 @@ import { BookData } from './BookData';
 //if(!Data.id) throw Error ("ID is missing");
 function sendUpdatedBook(id:string, data: BookData) {
 
-    console.log("ID-Wert:",);
+   
         return fetch(`http://localhost:8080/api/v1/books/${id}`, {
             method: "put",
             body: JSON.stringify(data),

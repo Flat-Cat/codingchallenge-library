@@ -1,6 +1,8 @@
 import { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import SendNewBook, { Data } from '../api/create';
+import SendNewBook from '../api/create';
+import { BookData } from "../api/BookData";
+
 //_FormEvent: Ereignis wenn ein Form.Element abgesendet wird. enthält inform. über das ausgelöste Ereignis
 function NewBook() {
 
@@ -14,7 +16,7 @@ function NewBook() {
         //_targets Datentyp = <Form>. DOM-Element, auf das ein Ereignis ausgelöst wird(Button)
         //_formData = speichert alles aus den InputFeldern in ein HtmlFormElement(JS Obj). autom.Iteration
 
-        const data: Data = {
+        const data: BookData = {
             //Data Soll wie folgt aussehen..
             title: formData.get("title") as string,
             author: formData.get("author") as string,
@@ -24,6 +26,11 @@ function NewBook() {
         }; 
         SendNewBook(data)
         //Promise hier.then (() => { }  
+
+        .then (() => {
+
+                navigate ("/")
+        })
     };
     const navigate = useNavigate();
     const handleClick = () => {
