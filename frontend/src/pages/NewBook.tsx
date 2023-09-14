@@ -36,16 +36,14 @@ function NewBook() {
     const handleClick = () => {
         navigate ("/")
     };
-           
-
     return (
         <div className="textfield">
             <form onSubmit={submitForm}>
 
-                <input className="input is-link" name="title" type="text" placeholder="Title"></input>
-                <input className="input is-link" name="author" type="text" placeholder="Author"></input>
-                <input className="input is-link" name="pubYear" type="number" placeholder="Publication Year"></input>
-                <input className="input is-link" name="isbn" type="text" placeholder="ISBN"></input>
+                <input className="input is-link" name="title" type="text" placeholder="Title" required></input>
+                <input className="input is-link" name="author" type="text" placeholder="Author" required></input>
+                <input className="input is-link" name="pubYear" type="number" placeholder="Publication Year" required></input>
+                <input className="input is-link" name="isbn" type="text" placeholder="ISBN" required></input>
 
                 <button className="button is-link is-pulled-left mr-6 mt-6" type="submit">Create</button>
                 <button className="button is-link is-light is-pulled-left mr-6 mt-6" onClick={handleClick} type="button">Back</button>

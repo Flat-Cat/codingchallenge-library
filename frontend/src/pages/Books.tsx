@@ -1,6 +1,6 @@
 import get from '../api/get';
 import { useNavigate, useParams } from 'react-router-dom'
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { BookData } from '../api/BookData';
 import deleteBook from '../api/delete';
 
@@ -14,10 +14,13 @@ function Books() {
         pubYear: 0
     })
     const { id } = useParams<{ id: string }>();
-
-    get(id).then(data => {
-        setData(data)
-    })
+//NEW
+    useEffect(() => {
+        get(id).then(data => {
+            setData(data)
+        })
+    }, [])
+    
     //___Button goBack__________________________________________________________________
     const navigate = useNavigate();
     const goBack = () => {
@@ -28,22 +31,15 @@ function Books() {
         navigate(`/books/update/${data.id}`)
     }
     //___Button deleteBook__________________________________________________________________
-
     const deleteBookButton = (formEvent: FormEvent) => {
         formEvent.preventDefault()
 
-        if (id) {
-            if (confirm("Are you sure you want to delete this?") == true) {
-
-                deleteBook(id, data).then(() => {
-                    navigate(`/`);
-                })
-            } else {
+        if (confirm("Are you sure you want to delete this?") == true) {
+            deleteBook(id, data).then(() => {
                 navigate(`/`);
-            }
-
+            })
         } else {
-            console.log("Id is Undefined")
+            navigate(`/`);
         }
     };
     return (
@@ -56,10 +52,8 @@ function Books() {
 
             <button className=" button is-link is-light is-pulled-left  mr-6 mt-6" onClick={goBack}>Back
             </button>
-
             <button className=" button is-link is-pulled-left  mr-6 mt-6" onClick={changeBook}>Change Book
             </button>
-
             <button className="delete is-large" onClick={deleteBookButton}>
             </button>
         </div>

@@ -4,7 +4,6 @@ import { BookData } from './BookData';
 //Hier musst du evtl Link hinzufügen
 function deleteBook(id: string | undefined, data: BookData)
 {
-
     return fetch(`http://localhost:8080/api/v1/books/${id}`, {
         method: "delete",
         body: JSON.stringify(data),

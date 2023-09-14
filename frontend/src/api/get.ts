@@ -1,6 +1,5 @@
 import { BookData } from "./BookData";
 
-
 //Hier musst du evtl Link hinzufügen
 function get(id:string | undefined) {
 
