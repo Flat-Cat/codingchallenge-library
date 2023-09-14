@@ -1,12 +1,12 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import SendNewBook from '../api/create';
-import { BookData } from "../api/BookData";
+import { BookData } from '../api/BookData';
+import InputFields from "../components/InputFields";
 
 //_FormEvent: Ereignis wenn ein Form.Element abgesendet wird. enthält inform. über das ausgelöste Ereignis
 function NewBook() {
 
-  
     const submitForm = (formEvent: FormEvent) => {
         formEvent.preventDefault()
         //_Default = Get Request + Reload der Seite
@@ -23,19 +23,18 @@ function NewBook() {
             isbn: formData.get("isbn") as string,
             pubYear: parseInt(formData.get("pubYear") as string)
             //form Data sind oft Strings.
-        }; 
+        };
         SendNewBook(data)
-        //Promise hier.then (() => { }  
-
-        .then (() => {
-
-                navigate ("/")
-        })
+            .then(() => {
+                navigate("/")
+            })
     };
+    
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate ("/")
+        navigate("/")
     };
+    
     return (
         <div className="textfield">
             <form onSubmit={submitForm}>

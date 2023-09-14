@@ -3,9 +3,10 @@ import { ChangeEvent, FormEvent, useEffect, useState } from 'react';
 import get from '../api/get';
 import { BookData } from '../api/BookData';
 import sendUpdatedBook from '../api/update';
+import InputFields from '../components/InputFields';
 
 function UpdateBook() {
-
+    //___useState____________________________________________________
     const [data, setData] = useState<BookData>({
         id: 0,
         title: "",
@@ -13,8 +14,9 @@ function UpdateBook() {
         isbn: "",
         pubYear: 0
     })
-    const { id } = useParams<{ id: string }>();
 
+    const { id } = useParams<{ id: string }>();
+    ///___useEffect____________________________________________________
     useEffect(() => {
         get(id).then((modifiedBookData) => {
             setData(modifiedBookData);
@@ -48,39 +50,14 @@ function UpdateBook() {
     }
     return (
         <div>
-            <form onSubmit={submitForm}>
-                <input
-                    className="input is-link"
-                    onInput={inputHandler}
-                    name="title"
-                    type="text"
-                    value={data.title}
-                />
-                <input
-                    className="input is-link"
-                    onInput={inputHandler}
-                    name="author"
-                    type="text"
-                    value={data.author}
-                />
-                <input
-                    className="input is-link"
-                    onInput={inputHandler}
-                    name="pubYear"
-                    type="text"
-                    value={data.pubYear}
-                />
-                <input
-                    className="input is-link"
-                    onInput={inputHandler}
-                    name="isbn"
-                    type="text"
-                    value={data.isbn}
-                />
+
+            <InputFields
+                bookData={data}
+                onInputCallBack={inputHandler}
+                onSubmitCallback={submitForm}>
+
                 <button className="button is-link is-pulled-left mr-6 mt-6">Change Book
-                </button>
-                
-            </form>
+                </button></InputFields>
 
             <button className=" button is-link is-light is-pulled-left mr-6 mt-6" onClick={goBack}>Back
             </button>
