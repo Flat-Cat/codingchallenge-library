@@ -1,11 +1,21 @@
-import { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import SendNewBook from '../api/create';
 import { BookData } from '../api/BookData';
 import InputFields from "../components/InputFields";
 
 //_FormEvent: Ereignis wenn ein Form.Element abgesendet wird. enthält inform. über das ausgelöste Ereignis
 function NewBook() {
+
+    //const { id } = useParams<{ id: string }>();
+
+    const [data, setData] = useState<BookData>({
+        id: 0,
+        title: "",
+        author: "",
+        isbn: "",
+        pubYear: 0
+    })
 
     const submitForm = (formEvent: FormEvent) => {
         formEvent.preventDefault()
@@ -29,25 +39,35 @@ function NewBook() {
                 navigate("/")
             })
     };
-    
+    //___inputHandler____________________________________________________________________-
+    const inputHandler = function (e: ChangeEvent<HTMLInputElement>) {
+
+        const target = e.target as HTMLInputElement;
+        const name = target.name;
+        setData({ ...data, [name]: target.value });
+        // [], da Wert als Schlüssel hier gesehen werden soll, damit wir in das obj. zugreifen können (Namen-wert paar)
+    }
+
     const navigate = useNavigate();
     const handleClick = () => {
         navigate("/")
-    };
-    
+    };1
     return (
         <div className="textfield">
-            <form onSubmit={submitForm}>
 
-                <input className="input is-link" name="title" type="text" placeholder="Title" required></input>
-                <input className="input is-link" name="author" type="text" placeholder="Author" required></input>
-                <input className="input is-link" name="pubYear" type="number" placeholder="Publication Year" required></input>
-                <input className="input is-link" name="isbn" type="text" placeholder="ISBN" required></input>
+                <InputFields
+                    bookData={data}
+                    onInputCallBack={inputHandler}
+                    onSubmitCallback={submitForm}>
+                    <button
+                        className="button is-link is-pulled-left mr-6 mt-6"
+                        type="submit">Create
+                    </button></InputFields>
 
-                <button className="button is-link is-pulled-left mr-6 mt-6" type="submit">Create</button>
-                <button className="button is-link is-light is-pulled-left mr-6 mt-6" onClick={handleClick} type="button">Back</button>
-
-            </form>
+                <button
+                    className="button is-link is-light is-pulled-left mr-6 mt-6"
+                    onClick={handleClick}
+                    type="button">Back</button>
         </div>
     )
 }

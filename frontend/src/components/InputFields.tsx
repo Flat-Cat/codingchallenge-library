@@ -26,6 +26,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
                 </input>
                 <input
                     className="input is-warning"
+                    onInput={props.onInputCallBack}
                     name="author"
                     type="text"
                     value={props.bookData.author}
@@ -34,6 +35,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
                 </input>
                 <input
                     className="input is-warning"
+                    onInput={props.onInputCallBack}
                     name="pubYear"
                     type="number"
                     value={props.bookData.pubYear}
@@ -42,6 +44,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
                 </input>
                 <input
                     className="input is-warning"
+                    onInput={props.onInputCallBack}
                     name="isbn"
                     type="text"
                     value={props.bookData.isbn}

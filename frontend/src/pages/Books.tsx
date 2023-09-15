@@ -14,7 +14,7 @@ function Books() {
         pubYear: 0
     })
     const { id } = useParams<{ id: string }>();
-//NEW
+
     useEffect(() => {
         get(id).then(data => {
             setData(data)
