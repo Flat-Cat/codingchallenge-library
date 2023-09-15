@@ -36,9 +36,11 @@ function NewBook() {
     const navigate = useNavigate();
     const handleClick = () => {
         navigate("/")
-    }; 
+    };
     return (
         <div className="textfield">
+
+            <h5 className="title is-5">Create a new Book</h5>
 
             <InputFields
                 bookData={data}

@@ -31,7 +31,7 @@ function UpdateBook() {
 
         if (id) {
             sendUpdatedBook(id, data).then(() => {
-                navigate(`/books/${id}`);
+                navigate(`/book/${id}`);
             })
         } else {
             console.log("id is Undefined")
@@ -50,7 +50,8 @@ function UpdateBook() {
     }
     return (
         <div>
-
+            <h5 className="title is-5">Change Book</h5>
+            
             <InputFields
                 bookData={data}
                 onInputCallBack={inputHandler}

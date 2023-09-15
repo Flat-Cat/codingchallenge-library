@@ -16,7 +16,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
             <form onSubmit={props.onSubmitCallback}>
 
                 <input
-                    className="input is-warning"
+                    className="input is-link mb-3"
                     onInput={props.onInputCallBack}
                     name="title"
                     type="text"
@@ -25,7 +25,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
                     required>
                 </input>
                 <input
-                    className="input is-warning"
+                    className="input is-link mb-3"
                     onInput={props.onInputCallBack}
                     name="author"
                     type="text"
@@ -34,7 +34,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
                     required>
                 </input>
                 <input
-                    className="input is-warning"
+                    className="input is-link mb-3"
                     onInput={props.onInputCallBack}
                     name="pubYear"
                     type="number"
@@ -43,7 +43,7 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
                     required>
                 </input>
                 <input
-                    className="input is-warning"
+                    className="input is-link mb-3"
                     onInput={props.onInputCallBack}
                     name="isbn"
                     type="text"

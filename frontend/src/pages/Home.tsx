@@ -13,22 +13,22 @@ function Home() {
 
     return (
         <div className="container">
-            <table className="table">
+            <table className="table is-bordered is-striped is-hoverable is-fullwidth">
                 <thead>
-                    <tr>
-                        <th><abbr title="bookId">Id</abbr></th>
-                        <th><abbr title="bookTitle">Title</abbr></th>
-                        <th><abbr title="bookAuthor">Author</abbr></th>
-                        <th><abbr title="bookPubYear">PubYear</abbr></th>
-                        <th><abbr title="bookIsbn">ISBN</abbr></th>
+                    <tr className="has-background-grey-lighter">
+                        <th><div title="bookId">ID</div></th>
+                        <th><div title="bookTitle">Title</div></th>
+                        <th><div title="bookAuthor">Author</div></th>
+                        <th><div title="bookPubYear">PubYear</div></th>
+                        <th><div title="bookIsbn">ISBN</div></th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map((item, index) => (
                         <tr key={index}>
                             <td>{item.id}</td>
-                            <td><Link to={`/books/${item.id}`}>{item.title}
-                                </Link></td>
+                            <td><Link to={`/book/${item.id}`}>{item.title}
+                            </Link></td>
                             <td>{item.author}</td>
                             <td>{item.pubYear}</td>
                             <td>{item.isbn}</td>

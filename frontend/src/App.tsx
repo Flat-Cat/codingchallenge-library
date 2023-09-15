@@ -1,5 +1,5 @@
 import './App.css'
-import Books from './pages/Books';
+import Book from './pages/Book';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import NewBook from './pages/NewBook';
@@ -12,9 +12,9 @@ function App() {
         <Routes>
 
           <Route path="/" element={<Home />} />
-          <Route path="/books/:id" element={<Books />} />
+          <Route path="/book/:id" element={<Book />} />
           <Route path="/new" element={<NewBook />} />
-          <Route path="/books/update/:id" element={<UpdateBook />} />
+          <Route path="/book/update/:id" element={<UpdateBook />} />
 
         </Routes>
       </Router>
