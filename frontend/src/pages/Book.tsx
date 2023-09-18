@@ -79,7 +79,7 @@ function Book() {
                                     <th>ISBN</th>
                                     <td>{data.isbn}</td>
                                 </tr>
-                            </tbody> </table>
+                            </tbody></table>
                         </div>
 
                     </div>
