@@ -3,10 +3,14 @@ import { useNavigate, useParams } from "react-router-dom";
 import SendNewBook from '../api/create';
 import { BookData } from '../api/BookData';
 import InputFields from "../components/InputFields";
+import DeleteButton from "../components/goToHomeButton";
+
 
 //_FormEvent: Ereignis wenn ein Form.Element abgesendet wird. enthält inform. über das ausgelöste Ereignis
 function NewBook() {
 
+    const pageTitle = "Create a new Entry"
+    const navigate = useNavigate();
     //___useState________________________________________________________________________
     const [data, setData] = useState<BookData>({
         id: 0,
@@ -27,35 +31,34 @@ function NewBook() {
         formEvent.preventDefault()
         //_Default = Get Request + Reload der Seite
 
+        //___useNavigate_____________________________________________________________________
         SendNewBook(data)
             .then(() => {
                 navigate("/")
             })
     };
-    //___useNavigate_____________________________________________________________________
-    const navigate = useNavigate();
-    const handleClick = () => {
-        navigate("/")
-    };
+
     return (
         <div className="textfield">
 
-            <h5 className="title is-5">Create a new Book</h5>
-
             <InputFields
+                pageTitle={pageTitle}
                 bookData={data}
                 onInputCallBack={inputHandler}
                 onSubmitCallback={submitForm}>
-                <button
-                    className="button is-link is-pulled-left mr-6 mt-6"
-                    type="submit">Create
-                </button></InputFields>
 
-            <button
-                className="button is-link is-light is-pulled-left mr-6 mt-6"
-                onClick={handleClick}
-                type="button">Back</button>
+                <div>
+                    <button
+                        className="button is-link"
+                        type="submit">Create
+                    </button>
+                    <DeleteButton></DeleteButton>
+                </div>
+
+            </InputFields>
+
         </div>
+
     )
 }
 export default NewBook;

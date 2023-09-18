@@ -4,8 +4,13 @@ import get from '../api/get';
 import { BookData } from '../api/BookData';
 import sendUpdatedBook from '../api/update';
 import InputFields from '../components/InputFields';
+import DeleteButton from '../components/goToHomeButton';
+
 
 function UpdateBook() {
+        const pageTitle = "Update Book"; // Hier setzen Sie den Wert für pageTitle
+
+    const navigate = useNavigate();
     //___useState____________________________________________________
     const [data, setData] = useState<BookData>({
         id: 0,
@@ -37,10 +42,7 @@ function UpdateBook() {
             console.log("id is Undefined")
         }
     };
-    const navigate = useNavigate();
-    const goBack = () => {
-        navigate(`/`)
-    }
+
     const inputHandler = function (e: ChangeEvent<HTMLInputElement>) {
 
         const target = e.target as HTMLInputElement;
@@ -48,20 +50,27 @@ function UpdateBook() {
         setData({ ...data, [name]: target.value });
         // [], da Wert als Schlüssel hier gesehen werden soll, damit wir in das obj. zugreifen können (Namen wert paar)
     }
+
     return (
         <div>
-            <h5 className="title is-5">Change Book</h5>
-            
+
             <InputFields
+                pageTitle={pageTitle}
                 bookData={data}
                 onInputCallBack={inputHandler}
                 onSubmitCallback={submitForm}>
 
-                <button className="button is-link is-pulled-left mr-6 mt-6">Change Book
-                </button></InputFields>
+                <div>
+                    <button
+                        className="button is-link"
+                        type="submit">Change Book
+                    </button>
+                    <DeleteButton></DeleteButton>
+                </div>
 
-            <button className=" button is-link is-light is-pulled-left mr-6 mt-6" onClick={goBack}>Back
-            </button>
+            </InputFields>
+
+
         </div>
     )
 }

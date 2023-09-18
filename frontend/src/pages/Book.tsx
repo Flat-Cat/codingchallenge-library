@@ -4,6 +4,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { BookData } from '../api/BookData';
 import deleteBook from '../api/delete';
 import "./Book.scss"
+import DeleteButton from '../components/goToHomeButton';
 function Book() {
 
     const [data, setData] = useState<BookData>({
@@ -84,13 +85,9 @@ function Book() {
                     </div>
                 </article>
                 <div className="box-footer">
-                    <button className="button is-link is-outlined is-pulled-right is-middle" onClick={changeBook}>Change Book
+                    <button className="button is-link is-outlined is-middle" onClick={changeBook}>Change Book
                     </button>
-                    <button className="button is-link is-light is-outlined is-pulled-right is-middle ml-3" onClick={goBack}>
-                        <span className="icon">
-                            <i className="fas fa-arrow-left"></i>
-                        </span>
-                    </button>
+                    <DeleteButton></DeleteButton>
                 </div>
             </div>
 
