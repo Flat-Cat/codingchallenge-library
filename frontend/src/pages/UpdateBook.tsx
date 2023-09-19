@@ -4,7 +4,7 @@ import get from '../api/get';
 import { BookData } from '../api/BookData';
 import sendUpdatedBook from '../api/update';
 import InputFields from '../components/InputFields';
-import DeleteButton from '../components/GoToHomeButton';
+import GoHomeButton from '../components/GoToHomeButton';
 
 
 function UpdateBook() {
@@ -53,7 +53,6 @@ function UpdateBook() {
 
     return (
         <div>
-
             <InputFields
                 pageTitle={pageTitle}
                 bookData={data}
@@ -65,12 +64,10 @@ function UpdateBook() {
                         className="button is-link"
                         type="submit">Change Book
                     </button>
-                    <DeleteButton></DeleteButton>
+                    <GoHomeButton></GoHomeButton>
                 </div>
 
             </InputFields>
-
-
         </div>
     )
 }
