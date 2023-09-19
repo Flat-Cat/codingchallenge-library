@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import SendNewBook from '../api/create';
 import { BookData } from '../api/BookData';
 import InputFields from "../components/InputFields";
-import DeleteButton from "../components/goToHomeButton";
+import DeleteButton from "../components/GoToHomeButton";
 
 
 //_FormEvent: Ereignis wenn ein Form.Element abgesendet wird. enthält inform. über das ausgelöste Ereignis

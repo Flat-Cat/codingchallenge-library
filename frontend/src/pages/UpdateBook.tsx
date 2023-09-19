@@ -4,7 +4,7 @@ import get from '../api/get';
 import { BookData } from '../api/BookData';
 import sendUpdatedBook from '../api/update';
 import InputFields from '../components/InputFields';
-import DeleteButton from '../components/goToHomeButton';
+import DeleteButton from '../components/GoToHomeButton';
 
 
 function UpdateBook() {

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 
-function DeleteButton() {
+function GoHomeButton() {
 
     const navigate = useNavigate();
     const goBack = () => {
@@ -18,4 +18,4 @@ function DeleteButton() {
 
 }
 
-export default DeleteButton;
+export default GoHomeButton;

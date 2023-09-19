@@ -1,5 +1,7 @@
 import listBooks from "../api/list";
 import { Link, useNavigate } from "react-router-dom";
+import { BookData } from '../api/BookData';
+import "./Home.scss"
 
 function Home() {
 
@@ -12,36 +14,44 @@ function Home() {
     }
 
     return (
+
         <div className="container">
-            <table className="table is-bordered is-striped is-hoverable is-fullwidth">
-                <thead>
-                    <tr className="has-background-grey-lighter">
-                        <th><div title="bookId">ID</div></th>
-                        <th><div title="bookTitle">Title</div></th>
-                        <th><div title="bookAuthor">Author</div></th>
-                        <th><div title="bookPubYear">PubYear</div></th>
-                        <th><div title="bookIsbn">ISBN</div></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((item, index) => (
-                        <tr key={index}>
-                            <td>{item.id}</td>
-                            <td><Link to={`/book/${item.id}`}>{item.title}
-                            </Link></td>
-                            <td>{item.author}</td>
-                            <td>{item.pubYear}</td>
-                            <td>{item.isbn}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
 
-            <button
-                className=" button is-link is-light is-pulled-left"
-                onClick={routeChange}>Create a new entry
-            </button>
+            {data.map((item, index) => (
 
+                <div className="card mx-6 my-6">
+
+                    <div className="card-header">
+
+                        {/* ___________Placeholder Image___________ */}
+                        <div className="card-image mr-1">
+                            <figure className="image is-16x24">
+                                <img src="https://image-placeholder.com/images/actual-size/240x400.png" alt="Placeholder" />
+                            </figure>
+                        </div>
+
+                        {/* ___________Card-Content___________ */}
+                        <div className="card-content">
+                            <div className="media" key={index}>
+                                <div className="media-content">
+                                    <p className="subtitle is-6 has-text-left mx-5 my-5">{item.author} </p>
+                                    <p className="title is-4 has-text-left mx-5 my-1">{item.title}</p>
+                                    <p className="subtitle is-6 has-text-left mx-5 my-5">{item.pubYear} </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ___________Card-Footer___________ */}
+                    <footer className="card-footer">
+                        <p className="card-footer-item">
+                            <span>
+                                <span className="has-text-grey-light">ISBN: </span> {item.isbn}</span>
+                        </p>
+                    </footer>
+
+                </div>
+            ))}
         </div>
     )
 }

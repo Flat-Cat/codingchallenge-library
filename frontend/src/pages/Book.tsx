@@ -4,7 +4,7 @@ import { FormEvent, useEffect, useState } from 'react';
 import { BookData } from '../api/BookData';
 import deleteBook from '../api/delete';
 import "./Book.scss"
-import DeleteButton from '../components/goToHomeButton';
+import DeleteButton from '../components/GoToHomeButton';
 function Book() {
 
     const [data, setData] = useState<BookData>({

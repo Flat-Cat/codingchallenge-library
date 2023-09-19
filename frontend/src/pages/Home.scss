@@ -1,0 +1,10 @@
+.card-image .is-16x24 img {
+    width: 200px; /* Ändern Sie die Breite nach Bedarf */
+
+  }
+  
+  .cardGrid {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 16px;
+}
