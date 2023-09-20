@@ -8,7 +8,7 @@ import GoHomeButton from '../components/GoToHomeButton';
 
 
 function UpdateBook() {
-        const pageTitle = "Update Book"; // Hier setzen Sie den Wert für pageTitle
+    const pageTitle = "Update Book Entry"; // Hier setzen Sie den Wert für pageTitle
 
     const navigate = useNavigate();
     //___useState____________________________________________________
@@ -52,7 +52,8 @@ function UpdateBook() {
     }
 
     return (
-        <div>
+
+        <div className="container">
             <InputFields
                 pageTitle={pageTitle}
                 bookData={data}
@@ -62,7 +63,7 @@ function UpdateBook() {
                 <div>
                     <button
                         className="button is-link"
-                        type="submit">Change Book
+                        type="submit">Save
                     </button>
                     <GoHomeButton></GoHomeButton>
                 </div>

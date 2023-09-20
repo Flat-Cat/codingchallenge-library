@@ -45,7 +45,7 @@ function Book() {
     };
     return (
 
-        <div>
+        <div className="container">
             <button className="delete is-middle is-pulled-right mt-2 mr-2" onClick={deleteBookButton}>
             </button>
             <div className="box">
@@ -56,7 +56,7 @@ function Book() {
                         <img src="https://image-placeholder.com/images/actual-size/240x400.png" alt="Placeholder" />
                     </figure>
 
-                    <div className="media-content my-4 mx-2">
+                    <div className="media-content">
                         <div className="content">
                             <table className='table'><tbody>
                                 <tr>

@@ -39,7 +39,8 @@ function NewBook() {
     };
 
     return (
-        <div className="textfield">
+
+        <div className="container">
 
             <InputFields
                 pageTitle={pageTitle}
@@ -50,7 +51,7 @@ function NewBook() {
                 <div>
                     <button
                         className="button is-link"
-                        type="submit">Create
+                        type="submit">Save
                     </button>
                    <GoHomeButton></GoHomeButton>
                 </div>

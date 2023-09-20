@@ -16,17 +16,17 @@ function Home() {
 
                     <div className="card" key={index}>
                         <Link to={`/book/${item.id}`}>
-                            <div className="card-header">
+                            <div className="bookHeader">
 
                                 {/* ___________Placeholder Image___________ */}
-                                <div className="card-image">
+                                <div className="bookImage">
                                     <figure className="image is-16x24">
                                         <img src="https://image-placeholder.com/images/actual-size/240x400.png" alt="Placeholder" />
                                     </figure>
                                 </div>
 
                                 {/* ___________Card-Content___________ */}
-                                <div className="card-content">
+                                <div className="bookContent">
                                     <div className="media">
                                         <div className="media-content">
                                             <p className="subtitle is-6 has-text-left has-text-grey mx-5 my-2">{item.author}</p>

@@ -18,11 +18,11 @@ const InputFields: FunctionComponent<Props> = (props: Props) => {
 
     return (
 
+        
         <div className="box">
-
             <h4 className="title is-4 has-text-left has-text-grey-lighter">{props.pageTitle}</h4>
 
-            <article className="media">
+            <article className="field">
                 <div className="textfield">
                     <form onSubmit={props.onSubmitCallback}>
 

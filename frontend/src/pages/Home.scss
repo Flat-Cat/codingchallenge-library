@@ -1,12 +1,22 @@
-.card{
-
-}
 .cardGrid {
     display: grid;
     grid-template-columns: 10fr 10fr;
     gap: 16px;
-
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .card-image .is-16x24 img {
     width: 200px;
+}
+.bookHeader {
+    display: grid;
+    //erstelle ein grid
+    grid: 1fr/ 0.4fr 1fr;
+}
+@media (max-width: 768px) {
+    .cardGrid {
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

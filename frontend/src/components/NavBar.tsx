@@ -1,19 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import "./NavBar.scss"
 
 function NavBar() {
-
-
-    // let navigate = useNavigate();
-    // const routeChange = () => {
-    //     let path = "/new";
-    //     navigate(path);
-    // }
-
-    //     <button
-    //     className=" button is-link is-light"
-    //     onClick={routeChange}>Create a new entry
-    // </button>
-
 
     return (
 
@@ -21,7 +8,7 @@ function NavBar() {
             <div className="navbar-brand">
             </div>
 
-            <div id="navbarExampleTransparentExample" className="navbar-menu">
+            <div id="navbarExampleTransparentExample" className="navbar-menu is-active">
                 <div className="navbar-start">
                     <a className="navbar-item" href="/">
                         Home
@@ -48,18 +35,19 @@ function NavBar() {
                 </div>
 
                 <div className="navbar-end">
-                    <div className="navbar-item">
-                        <div className="field is-grouped">
+                    <div className="navbar-item is-left">
+                        <div className="control">
+                            <h4 className="subtitle is-6">LibraEye </h4>
+                        </div>
 
-                            <div className="control">
-                                LibraEye
+                        <div className="field is-grouped">
+                            <div className="control mx-3">
                                 <span className="icon">
                                     <figure className="image is-36x36">
-                                        <img src="src/favicon.png" alt="LibraEye" />
+                                        <img src="favicon.png" alt="LibraEye" />
                                     </figure>
                                 </span>
                             </div>
-
                         </div>
                     </div>
                 </div>
