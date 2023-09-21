@@ -1,3 +1,6 @@
+@import "../variables";
+@import "bulma/sass/utilities/mixins.sass";
+
 .cardGrid {
     display: grid;
     grid-template-columns: 10fr 10fr;
@@ -13,7 +16,8 @@
     //erstelle ein grid
     grid: 1fr/ 0.4fr 1fr;
 }
-@media (max-width: 768px) {
+
+@include mobile {
     .cardGrid {
         grid-template-columns: 1fr;
         margin-left: 10px;

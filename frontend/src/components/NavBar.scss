@@ -1,20 +1,20 @@
-.navbar {
+// .navbar {
 
-    // When mobile bulma overwrrite certain things. We have to override the override.
-    @media (max-width: 769px) {
+//     // When mobile bulma overwrrite certain things. We have to override the override.
+//     @media (max-width: 769px) {
 
-        // Bulma hides navbar-menu on mobile. We force to display it as flex.
-        .navbar-menu {
-            display: flex;
-        }
+//         // Bulma hides navbar-menu on mobile. We force to display it as flex.
+//         .navbar-menu {
+//             display: flex;
+//         }
 
-        // Bulma displays on mobile these as block.
-        // We need to force to display it as flex and direction goes horizontally (row).
-        .navbar-start,
-        .container {
-            display: flex;
-            flex-direction: row;
-        }
-    }
+//         // Bulma displays on mobile these as block.
+//         // We need to force to display it as flex and direction goes horizontally (row).
+//         .navbar-start,
+//         .container {
+//             display: flex;
+//             flex-direction: row;
+//         }
+//     }
 
-}
+// }

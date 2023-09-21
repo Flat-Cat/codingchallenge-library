@@ -5,6 +5,7 @@ import { BookData } from '../api/BookData';
 import deleteBook from '../api/delete';
 import "./Book.scss"
 import DeleteButton from '../components/GoToHomeButton';
+import GoHomeButton from '../components/GoToHomeButton';
 function Book() {
 
     const [data, setData] = useState<BookData>({
@@ -46,7 +47,7 @@ function Book() {
     return (
 
         <div className="container">
-            <button className="delete is-middle is-pulled-right mt-2 mr-2" onClick={deleteBookButton}>
+            <button className="delete is-middle is-pulled-right mt-3 mr-5" onClick={deleteBookButton}>
             </button>
             <div className="box">
                 <h5 className="title is-5">Book Information</h5>
@@ -87,7 +88,7 @@ function Book() {
                 <div className="box-footer">
                     <button className="button is-link is-outlined is-middle" onClick={changeBook}>Change Book
                     </button>
-                    <DeleteButton></DeleteButton>
+                    <GoHomeButton></GoHomeButton>
                 </div>
             </div>
 
