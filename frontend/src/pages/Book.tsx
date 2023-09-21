@@ -4,7 +4,6 @@ import { FormEvent, useEffect, useState } from 'react';
 import { BookData } from '../api/BookData';
 import deleteBook from '../api/delete';
 import "./Book.scss"
-import DeleteButton from '../components/GoToHomeButton';
 import GoHomeButton from '../components/GoToHomeButton';
 function Book() {
 
@@ -23,12 +22,8 @@ function Book() {
         })
     }, [])
 
-    //___Button goBack__________________________________________________________________
-    const navigate = useNavigate();
-    const goBack = () => {
-        navigate("/")
-    }
     //___Button changeBook______________________________________________________________
+    const navigate = useNavigate();
     const changeBook = () => {
         navigate(`/book/update/${data.id}`)
     }

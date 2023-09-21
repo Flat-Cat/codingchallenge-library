@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 // @ sind wie hooks
@@ -34,7 +35,6 @@ static final String frontendOrigin = "http://localhost:5173/";
     public List < Book > getAllBooks() {
         return bookRepository.findAll();
     }
-
     @CrossOrigin(origins = BookController.frontendOrigin) 
     @GetMapping("/books/{id}")
     public ResponseEntity < Book > getBookById(@PathVariable(value = "id") Long bookId )
@@ -73,5 +73,10 @@ static final String frontendOrigin = "http://localhost:5173/";
         Map < String, Boolean > response = new HashMap < > ();
         response.put("deleted", Boolean.TRUE);
         return response;
+    }
+      @CrossOrigin(origins = BookController.frontendOrigin)
+        @GetMapping("/books/search")
+    public  List <Book> searchProducts(@RequestParam(value = "query") String query){
+        return (bookRepository.searchBooks(query));
     }
 }

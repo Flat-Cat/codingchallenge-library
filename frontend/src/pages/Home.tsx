@@ -1,6 +1,7 @@
 import listBooks from "../api/list";
 import { Link } from "react-router-dom";
 import "./Home.scss"
+import SearchField from "../components/SearchField";
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
     return (
 
         <div className="container">
+            <SearchField></SearchField>
             <div className="cardGrid">
 
                 {data.map((item, index) => (
