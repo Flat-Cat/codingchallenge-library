@@ -1,19 +1,8 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { BookData } from "../api/BookData";
 import search from "../api/search";
-
 
 function SearchField() {
 
-    // das eingegebene mit search öffnen 
-    // Variable für SearchInput
-    // wert von title soll sich ändern 
-    // useEffect: eher bei ascyn.Prozessesn 
-    //(erst was senden, dann anfrage und antwort)
-
-    const navigate = useNavigate();
-    const { queryTitle } = useParams<{ queryTitle: string }>();
     const [query, setQuery] = useState<string>("")
 
     // ______inputHandler_______________________________________________________________
@@ -23,19 +12,24 @@ function SearchField() {
         const target = e.target as HTMLInputElement;
         setQuery(target.value);
     }
-
     //___submitForm_____________________________________________________________________
     const submitForm = (formEvent: FormEvent) => {
         formEvent.preventDefault()
         //_Default = Get Request + Reload der Seite
 
-        //___useNavigate_________________________________________________________________
         search(query)
-            .then(() => {
-                navigate("/")
-            })
-        console.log(query)
-        
+
+            .then(dbData =>
+                console.log(dbData)
+            )
+            .catch(error => {
+                console.error(error);
+            });
+    /*_So nicht! 
+    search(query)
+    .then(() => {search(query)
+    console.log(search(query)) }) */
+
     }
     return (
 

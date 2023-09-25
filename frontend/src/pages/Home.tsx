@@ -7,7 +7,6 @@ function Home() {
 
     const data = listBooks();
 
-
     return (
 
         <div className="container">

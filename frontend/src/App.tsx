@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import NewBook from './pages/NewBook';
 import UpdateBook from './pages/UpdateBook';
 import NavBar from './components/NavBar';
+
 function App() {
 
   return (
