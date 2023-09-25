@@ -44,7 +44,7 @@ function UpdateBook() {
     };
 
     const inputHandler = function (e: ChangeEvent<HTMLInputElement>) {
-
+        //_FormEvent: Kommt nur von eineme Input feld
         const target = e.target as HTMLInputElement;
         const name = target.name;
         setData({ ...data, [name]: target.value });

@@ -34,7 +34,7 @@ function NavBar() {
         <nav className="navbar is-dark is-transparent is-fixed-top">
             <div className="navbar-brand">
 
-                <a className="navbar-item" href="https://bulma.io">
+                <a className="navbar-item" href="/">
                     <img src="favicon.png" height="28"></img>
                 </a>
 

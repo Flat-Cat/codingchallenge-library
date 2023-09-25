@@ -1,9 +1,8 @@
 import { BookData } from "./BookData";
 
-//Hier musst du evtl Link hinzufügen
-function get(id:string | undefined) {
+function search(queryTitle:string | undefined) {
 
-        return fetch(`http://localhost:8080/api/v1/books/${id}`, {
+        return fetch(`http://localhost:8080/api/v1/books/search?query=${queryTitle}`, {
             method: "get"
         })
             .then((response) => response.json())
@@ -13,4 +12,4 @@ function get(id:string | undefined) {
         }
     )
 }
-export default get;
+export default search;
