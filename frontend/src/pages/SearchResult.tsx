@@ -1,17 +1,41 @@
-import listBooks from "../api/list";
-import { Link } from "react-router-dom";
-import "./Home.scss"
+import search from "../api/search";
+import { Link, useParams } from "react-router-dom";
 import SearchField from "../components/SearchField";
+import { BookData } from "../api/BookData";
+import { useEffect, useState } from "react";
+import GoHomeButton from "../components/GoToHomeButton";
+import "./SearchResult.scss"
 
-function Home() {
+function SearchResult() {
 
-    const data = listBooks();
+    const [data, setData] = useState<BookData[]>([])
+    const { query } = useParams<{ query: string }>();
+
+    useEffect(() => {
+        search(query)
+            .then(dbData => {
+                setData(dbData);
+            })
+            .catch(error => {
+                console.error("Error: " + error);
+            });
+    }, [query]);
+    //xx WARUM QUERY
+    //xx convoluted reddit
 
     return (
 
         <div className="container">
-             <h4 className="is-size-3 is-family-code has-text-weight-bold is-italic is-3 has-text-grey has-text-centered">Welcome to LibraEye!</h4>
-            <SearchField></SearchField>
+
+            <div className="column">
+                <div className="columns">
+                    <SearchField></SearchField>
+                    <div className="columns  py-5 px-2">
+                        <GoHomeButton></GoHomeButton>
+                    </div>
+                </div>
+            </div>
+            <h5 className="subtitle is-5">Search for "{query}":</h5>
             <div className="cardGrid">
 
                 {data.map((item, index) => (
@@ -33,7 +57,7 @@ function Home() {
                                         <div className="media-content">
                                             <p className="subtitle is-6 has-text-left has-text-grey mx-5 my-2">{item.author}</p>
                                             <p className="title is-4 has-text-left mx-5 my-1">{item.title}</p>
-                                            <p className="subtitle is-6 has-text-left has-text-grey-light mx-5 my-5">Publication Year: {item.pubYear}</p>
+                                            <p className="subtitle is-6 has-text-left has-text-grey-light mx-5 my-5">{item.pubYear}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -57,4 +81,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default SearchResult;

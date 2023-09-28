@@ -1,0 +1,30 @@
+@import "../variables";
+@import "bulma/sass/utilities/mixins.sass";
+
+@include mobile {
+    //SearchField:
+    .columns {
+        align-items: center; // Vertikal zentrieren
+        display: flex;
+    }
+    //Knopf: 
+    .columns.py-5.px-2 {
+        margin-right: 5px;
+    }
+    .bookHeader {
+        display: flex; // Ändern Sie die Anzeige auf Flexbox
+        flex-direction: column; // Inhalt unten, Bild oben
+        align-items: center; // Zentriert den Inhalt horizontal
+        text-align: center; // Zentriert den Text horizontal
+        margin-top: 15px;
+    }
+    .cardGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+    .subtitle.is-5 {
+        margin-left: 10px;
+        margin-bottom: 9px;
+    }
+}

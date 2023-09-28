@@ -49,11 +49,12 @@ function NewBook() {
                 onSubmitCallback={submitForm}>
 
                 <div>
+                <GoHomeButton></GoHomeButton>
                     <button
-                        className="button is-link"
+                        className="button is-primary mx-2"
                         type="submit">Save
                     </button>
-                   <GoHomeButton></GoHomeButton>
+                 
                 </div>
 
             </InputFields>

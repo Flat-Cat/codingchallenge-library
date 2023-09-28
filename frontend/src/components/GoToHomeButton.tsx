@@ -9,13 +9,14 @@ function GoHomeButton() {
     }
     return (
 
-        <button className="button is-link is-light is-outlined is-pulled-right is-middle ml-3" onClick={goBack}>
-        <span className="icon">
-            <i className="fas fa-arrow-left"></i> 
-        </span>
-    </button>
-    )
+        <button className="button is-primary is-light is-outlined" onClick={goBack}>
+            <span className="icon">
+                <i className="fas fa-arrow-left"></i>
+            </span>
+            <span>Back</span>
+        </button>
 
+    )
 }
 
 export default GoHomeButton;

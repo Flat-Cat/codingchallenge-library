@@ -6,10 +6,7 @@ import sendUpdatedBook from '../api/update';
 import InputFields from '../components/InputFields';
 import GoHomeButton from '../components/GoToHomeButton';
 
-
 function UpdateBook() {
-    const pageTitle = "Update Book Entry"; // Hier setzen Sie den Wert für pageTitle
-
     const navigate = useNavigate();
     //___useState____________________________________________________
     const [data, setData] = useState<BookData>({
@@ -42,7 +39,6 @@ function UpdateBook() {
             console.log("id is Undefined")
         }
     };
-
     const inputHandler = function (e: ChangeEvent<HTMLInputElement>) {
         //_FormEvent: Kommt nur von eineme Input feld
         const target = e.target as HTMLInputElement;
@@ -50,6 +46,9 @@ function UpdateBook() {
         setData({ ...data, [name]: target.value });
         // [], da Wert als Schlüssel hier gesehen werden soll, damit wir in das obj. zugreifen können (Namen wert paar)
     }
+    const pageTitle = "Update Book: " + data.title; 
+    // nicht in {} da {} JS Code beinhaltet (JSX)
+    // Direkte Konkatenation in JavaScript-Ausdruck; KONKAT: zwei oder mehr Zeichenketten aneinanderzuhängen.
 
     return (
 
@@ -61,11 +60,12 @@ function UpdateBook() {
                 onSubmitCallback={submitForm}>
 
                 <div>
+                <GoHomeButton></GoHomeButton>
                     <button
-                        className="button is-link"
+                        className="button is-primary mx-2"
                         type="submit">Save
                     </button>
-                    <GoHomeButton></GoHomeButton>
+                  
                 </div>
 
             </InputFields>

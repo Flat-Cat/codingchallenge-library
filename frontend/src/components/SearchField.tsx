@@ -1,42 +1,36 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import search from "../api/search";
+import { BookData } from "../api/BookData";
+import { useNavigate } from "react-router-dom";
 
 function SearchField() {
 
+    const navigate = useNavigate();
     const [query, setQuery] = useState<string>("")
 
     // ______inputHandler_______________________________________________________________
     const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         // HTMLInputElement:Kann mehrere Input felder Beeinflussen
-
         const target = e.target as HTMLInputElement;
         setQuery(target.value);
     }
     //___submitForm_____________________________________________________________________
     const submitForm = (formEvent: FormEvent) => {
+        if (query) {
         formEvent.preventDefault()
         //_Default = Get Request + Reload der Seite
-
-        search(query)
-
-            .then(dbData =>
-                console.log(dbData)
-            )
-            .catch(error => {
-                console.error(error);
-            });
-    /*_So nicht! 
-    search(query)
-    .then(() => {search(query)
-    console.log(search(query)) }) */
-
+        navigate(`/searchresult/${query}`);
+        } else {
+            console.log("empty string?")
+        }
     }
     return (
 
-        <form onSubmit={submitForm} className="column is-three-fifths is-offset-one-fifth">
+        <form onSubmit={submitForm} className="column is-three-fifths is-offset-one-fifth is-primary">
+            
             <div className="control">
                 <input
-                    className="input is-focused mb-5"
+                    className="input is-primary"
                     type="text"
                     placeholder="Search..."
                     onInput={inputHandler}>

@@ -42,14 +42,15 @@ function Book() {
     return (
 
         <div className="container">
-            <button className="delete is-middle is-pulled-right mt-3 mr-5" onClick={deleteBookButton}>
-            </button>
+            <div className="column">
+                <h4 className="title is-4 has-text-left has-text-grey-dark">Book Information</h4>
+            </div>
+
             <div className="box">
-                <h5 className="title is-5">Book Information</h5>
                 <article className="media">
 
-                    <figure className="image is-16x24 mr-3">
-                        <img src="https://image-placeholder.com/images/actual-size/240x400.png" alt="Placeholder" />
+                    <figure className="image is-16x24 mr-5 ">
+                        <img src="/BookCover02.jpeg" alt="Placeholder" />
                     </figure>
 
                     <div className="media-content">
@@ -81,9 +82,20 @@ function Book() {
                     </div>
                 </article>
                 <div className="box-footer">
-                    <button className="button is-link is-outlined is-middle" onClick={changeBook}>Change Book
-                    </button>
                     <GoHomeButton></GoHomeButton>
+                    <button className="button is-danger is-light is-outlined is-pulled-right mt-3 mx-3" onClick={deleteBookButton}>
+
+                        <span className="icon">
+                            <i className="fas fa-solid fa-trash"></i>
+                        </span>
+                        <span>Delete</span>
+                    </button>
+
+
+
+                    <button className="button is-primary" onClick={changeBook}>Change Book
+                    </button>
+
                 </div>
             </div>
 
