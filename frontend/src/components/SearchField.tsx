@@ -16,21 +16,23 @@ function SearchField() {
     }
     //___submitForm_____________________________________________________________________
     const submitForm = (formEvent: FormEvent) => {
-        if (query) {
-        formEvent.preventDefault()
-        //_Default = Get Request + Reload der Seite
-        navigate(`/searchresult/${query}`);
+        formEvent.preventDefault();
+
+        const trimmedQuery = query.trim();
+        
+        if (trimmedQuery === "") {
+            alert("You have not entered anything :(");
         } else {
-            console.log("empty string?")
+            navigate(`/searchresult/${trimmedQuery}`);
         }
     }
     return (
 
         <form onSubmit={submitForm} className="column is-three-fifths is-offset-one-fifth is-primary">
-            
+
             <div className="control">
                 <input
-                    className="input is-primary"
+                    className="input is-focused is-primary"
                     type="text"
                     placeholder="Search..."
                     onInput={inputHandler}>
