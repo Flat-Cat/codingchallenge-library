@@ -7,7 +7,7 @@ Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot f�
 
 ## Systemvoraussetzungen:
 
-1.  **Java Development Kit (JDK):** Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
+1.  @@Java Development Kit (JDK):@@ Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
 2. **Node.js und npm (Node Package Manager):** Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js und npm entsprechend deinem Betriebssystem.
 3. **Maven:** Dieses Build-Tool wird für die Verwaltung der Backend-Abhängigkeiten verwendet. Installiere Maven gemäß den Anweisungen für dein Betriebssystem.
 4. **SQL-Datenbank:** Du benötigst die SQL-Datenbank MariaDB. Stelle sicher, dass sie installiert und betriebsbereit ist, da sie zur Speicherung von Daten verwendet wird.
