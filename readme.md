@@ -5,13 +5,13 @@ Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot f�
 
 ## Systemvoraussetzungen:
 
-1.  Java Development Kit (JDK): Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
-2. Node.js und npm (Node Package Manager): Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js und npm entsprechend deinem Betriebssystem.
-3. Maven: Dieses Build-Tool wird für die Verwaltung der Backend-Abhängigkeiten verwendet. Installiere Maven gemäß den Anweisungen für dein Betriebssystem.
-4. SQL-Datenbank: Du benötigst die SQL-Datenbank MariaDB. Stelle sicher, dass sie installiert und betriebsbereit ist, da sie zur Speicherung von Daten verwendet wird.
-5. JavaScript/TypeScript: Grundlegende Kenntnisse in JavaScript und TypeScript sind erforderlich, da sie für die Entwicklung und Anpassung des Frontends verwendet werden.
-6. SQL: Grundlegende Kenntnisse in SQL sind erforderlich, da du SQL-Abfragen für die Datenbankverwaltung schreiben musst.
-7. Java: Grundlegende Kenntnisse in Java sind erforderlich, da du Java Spring Boot für die Entwicklung und Anpassung des Backends verwenden wirst.
+1.  **Java Development Kit (JDK):** Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
+2. **Node.js und npm (Node Package Manager):** Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js und npm entsprechend deinem Betriebssystem.
+3. **Maven:** Dieses Build-Tool wird für die Verwaltung der Backend-Abhängigkeiten verwendet. Installiere Maven gemäß den Anweisungen für dein Betriebssystem.
+4. **SQL-Datenbank:** Du benötigst die SQL-Datenbank MariaDB. Stelle sicher, dass sie installiert und betriebsbereit ist, da sie zur Speicherung von Daten verwendet wird.
+5. **JavaScript/TypeScript:** Grundlegende Kenntnisse in JavaScript und TypeScript sind erforderlich, da sie für die Entwicklung und Anpassung des Frontends verwendet werden.
+6. **SQL:** Grundlegende Kenntnisse in SQL sind erforderlich, da du SQL-Abfragen für die Datenbankverwaltung schreiben musst.
+7. **Java:** Grundlegende Kenntnisse in Java sind erforderlich, da du Java Spring Boot für die Entwicklung und Anpassung des Backends verwenden wirst.
 
 ## Schritte zur Einrichtung und Ausführung der Anwendung
 
@@ -24,8 +24,8 @@ Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot f�
 
 ###  Dieser Befehl installiert alle erforderlichen Frontend-Abhängigkeiten aus der package.json-Datei, einschließlich Frameworks wie Bulma und React.
 
-1. Stelle sicher, dass du das Java Development Kit (JDK) auf deinem Computer installiert hast.
-2. Installiere Java Spring Boot auf deinem Computer.
+1. Stelle sicher, dass du das Java Development Kit **(JDK)** auf deinem Computer installiert hast.
+2. Installiere **Java Spring Boot** auf deinem Computer.
 3. Wechsle zurück zum Hauptverzeichnis des Projekts.
 4. Installiere die Backend-Abhängigkeiten, indem du den folgenden Befehl ausführst 
 
@@ -33,7 +33,8 @@ Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot f�
        
 ### Dieser Befehl installiert alle Backend-Abhängigkeiten mithilfe von Maven, einschließlich Java Spring Boot.
 
-    • Lade die books.sql-Datei in deine MariaDB-Datenbank hoch. Die SQL-Datei befindet sich im Verzeichnis backend/src/main/resources/sql/books.sql.
+    • Lade die books.sql-Datei in deine MariaDB-Datenbank hoch. Die SQL-Datei befindet sich im Verzeichnis 
+**backend/src/main/resources/sql/books.sql.**
     • Passe die Datei example.properties an, indem du durch deinen Datenbank-Benutzernamen und dein Passwort ersetzt. Lösche „example“ aus dem Dateiennamen example.application.properties. Diese Datei enthält die Datenbankkonfiguration für das Backend.
     • Starte das Frontend, indem du in das Frontend-Verzeichnis wechselst und den folgenden Befehl ausführst: ```$ npm run dev```
 
@@ -45,4 +46,4 @@ oder per start-Knopf in deinem IDE (Meistens oben Links)
 Dieser Befehl startet die Spring Boot-Anwendung für das Backend.
 
 ### Die Anwendung sollte nun lokal laufen, und du kannst sie über deinen Webbrowser aufrufen.
-## Viel Spaß beim Entwickeln!
+## Viel Spaß beim Entwickeln! **:D**
