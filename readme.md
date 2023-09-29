@@ -1,3 +1,5 @@
+(english translation coming soon)
+
 # ACHTUNG!
 **Diese Anleitung gilt ausschließlich für die Installation des Standalone-Zweigs!**
 Der Hauptzweig (Main-Branch) dient lediglich zur Veranschaulichung. Wenn du das Projekt auf deinem eigenen System zum Laufen bringen möchtest, wechsle bitte zum Standalone-Zweig **(Branch "standalone")** und befolge die Anweisungen unten.
