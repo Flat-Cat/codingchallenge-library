@@ -47,5 +47,7 @@ Starte das Backend, indem du den folgenden Befehl ausführst:
 oder per start-Knopf in deinem IDE (Meistens oben Links)
 Dieser Befehl startet die Spring Boot-Anwendung für das Backend.
 
+*Deine Anwendung sollte nun lokal laufen. Du kannst sie im Webbrowser öffnen, indem du die entsprechende Adresse aufrufst(normalerweise http://localhost:3000 für das Frontend und http://localhost:8080 für das Backend).*
+
 ### Die Anwendung sollte nun lokal laufen, und du kannst sie über deinen Webbrowser aufrufen.
 ## Viel Spaß beim Entwickeln! **:D**
