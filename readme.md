@@ -5,8 +5,8 @@ This README file is used to get the project running properly on your desired dev
 This repository contains a fullstack application developed using Java Spring Boot for the backend and React for the frontend.
 
 ## System Requirements: ##
-- **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/))** You need a Java environment. Install the JDK according to the instructions for your OS.
-- **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))** This is needed for managing frontend dependencies. Install Node.js through npm accordingly in your OS.
+- **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/)):** You need a Java environment. Install the JDK according to the instructions for your OS.
+- **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)):** This is needed for managing frontend dependencies. Install Node.js through npm accordingly in your OS.
 - **Maven ([MVN](https://maven.apache.org/install.html)):** This build tool is used for managing backend dependencies. Install Maven according to the instructions for your OS.
 - **SQL database([MariaDB](https://www.mariadbtutorial.com/getting-started/install-mariadb/)):** You will need the SQL database MariaDB. Make sure it is installed and operational as it will be used to store data.
 - **JavaScript/TypeScript:** Basic knowledge of [JavaScript](https://javascript.info/) and [TypeScript](https://www.typescriptlang.org/docs/) is required as it will be used to develop and customize the frontend.
@@ -22,9 +22,10 @@ This repository contains a fullstack application developed using Java Spring Boo
 
 ``` $ cd frontend/``` ```$ npm install```
 
-**This command will install all the required frontend dependencies from the package.json file, including frameworks like Bulma and React**.
+**This command will install all the required frontend dependencies from the package.json file, including 
+frameworks like  [Bulma](https://bulma.io/) and [React](https://react.dev/).**
 
-4. make sure you have the Java Development Kit **(JDK)** installed on your system.
+4. make sure you have the Java Development Kit **([JDK:](https://www.oracle.com/de/java/technologies/downloads/))** installed on your system.
 5. Install [Java Spring Boot](https://spring.io/projects/spring-boot) on your system. 
 6. Go back to the root directory of the project.
 7. install the backend dependencies by running the following command 
@@ -73,8 +74,8 @@ Diese README-Datei dient dazu, das Projekt ordnungsgemäß auf deinem gewünscht
 Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot für das Backend und React für das Frontend entwickelt wurde.
 
 ## Systemvoraussetzungen: ##
--  **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/))** Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
-- **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))** Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js durch npm entsprechend in deinem Betriebssystem.
+-  **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/)):** Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
+- **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)):** Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js durch npm entsprechend in deinem Betriebssystem.
 - **Maven ([MVN](https://maven.apache.org/install.html)):** Dieses Build-Tool wird für die Verwaltung der Backend-Abhängigkeiten verwendet. Installiere Maven gemäß den Anweisungen für dein Betriebssystem.
 - **SQL-Datenbank([MariaDB](https://www.mariadbtutorial.com/getting-started/install-mariadb/)):** Du benötigst die SQL-Datenbank MariaDB. Stelle sicher, dass sie installiert und betriebsbereit ist, da sie zur Speicherung von Daten verwendet wird.
 - **JavaScript/TypeScript:** Grundlegende Kenntnisse in [JavaScript](https://javascript.info/) und [TypeScript](https://www.typescriptlang.org/docs/) sind erforderlich, da sie für die Entwicklung und Anpassung des Frontends verwendet werden.
@@ -90,9 +91,10 @@ Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot f�
 ``` $ cd frontend/```
 ``` $ npm install```
 
-**Dieser Befehl installiert alle erforderlichen Frontend-Abhängigkeiten aus der package.json-Datei, einschließlich Frameworks wie Bulma und React**
+**Dieser Befehl installiert alle erforderlichen Frontend-Abhängigkeiten aus der package.json-Datei, einschließlich 
+Frameworks wie [Bulma](https://bulma.io/) und [React](https://react.dev/).**
 
-4. Stelle sicher, dass du das Java Development Kit **(JDK)** auf deinem System installiert hast.
+4. Stelle sicher, dass du das Java Development Kit **([JDK:](https://www.oracle.com/de/java/technologies/downloads/))** auf deinem System installiert hast.
 5. Installiere [Java Spring Boot](https://spring.io/projects/spring-boot) auf deinem System.
 6. Wechsle zurück zum Hauptverzeichnis des Projekts.
 7. Installiere die Backend-Abhängigkeiten, indem du den folgenden Befehl ausführst 
@@ -118,6 +120,7 @@ oder per start-Knopf in deinem IDE (Meistens oben Rechts)
 *Deine Anwendung sollte nun lokal laufen. Du kannst sie im Webbrowser öffnen, indem du die entsprechende Adresse aufrufst(normalerweise http://localhost:3000 für das Frontend und http://localhost:8080 für das Backend).*
 
 **Die Anwendung sollte nun lokal laufen und du kannst sie über deinen Webbrowser aufrufen.**
+
 **Viel Spaß beim Entwickeln! :D**
 
 
