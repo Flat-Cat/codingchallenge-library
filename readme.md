@@ -1,18 +1,17 @@
 *German translation below in the text.*
 
 ## Setting up and running the project ##
-This README file is used to get the project running properly on your desired device. It is important to note that the commands and steps may vary depending on your operating system. This project is more intended for users who already have experience with Java and JavaScript and their libraries and frameworks.
+This README file is used to get the project running properly on your desired device. It is important to note that the commands and steps may vary depending on your OS. This project is more intended for users who already have experience with Java and JavaScript and their libraries and frameworks.
 This repository contains a fullstack application developed using Java Spring Boot for the backend and React for the frontend.
 
 ## System Requirements: ##
-
-- **Java Development Kit (JDK):** You will need a Java environment. Install the JDK according to the instructions for your operating system.
-- **Node.js and npm (Node Package Manager):** These are needed for managing frontend dependencies. Install Node.js and npm according to your operating system.
-- **Maven:** This build tool is used for managing the backend dependencies. Install Maven according to the instructions for your operating system.
-- **SQL database:** You will need the SQL database MariaDB. Make sure it is installed and operational as it will be used to store data.
-- **JavaScript/TypeScript:** Basic knowledge of JavaScript and TypeScript is required, as they will be used to develop and customize the frontend.
-- **SQL:** Basic knowledge of SQL is required as you will need to write SQL queries for database management.
-- **Java:** Basic knowledge of Java is required as you will be using Java Spring Boot for backend development and customization.
+- **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/))** You need a Java environment. Install the JDK according to the instructions for your OS.
+- **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))** This is needed for managing frontend dependencies. Install Node.js through npm accordingly in your OS.
+- **Maven ([MVN](https://maven.apache.org/install.html)):** This build tool is used for managing backend dependencies. Install Maven according to the instructions for your OS.
+- **SQL database([MariaDB](https://www.mariadbtutorial.com/getting-started/install-mariadb/)):** You will need the SQL database MariaDB. Make sure it is installed and operational as it will be used to store data.
+- **JavaScript/TypeScript:** Basic knowledge of [JavaScript](https://javascript.info/) and [TypeScript](https://www.typescriptlang.org/docs/) is required as it will be used to develop and customize the frontend.
+- **SQL:** Basic knowledge of [SQL](https://www.w3schools.com/sql/) is required as you will need to write SQL queries for database management.
+- **Java:** Basic knowledge of [Java](https://www.learnjavaonline.org/) is required as you will be using Java Spring Boot for backend development and customization.
 
 ## Steps to set up and run the application ##
 
@@ -74,14 +73,13 @@ Diese README-Datei dient dazu, das Projekt ordnungsgemäß auf deinem gewünscht
 Dieses Repository enthält eine Fullstack-Anwendung, die mit Java Spring Boot für das Backend und React für das Frontend entwickelt wurde.
 
 ## Systemvoraussetzungen: ##
-
--  **Java Development Kit (JDK):** Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
-- **Node.js und npm (Node Package Manager):** Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js und npm entsprechend deinem Betriebssystem.
-- **Maven:** Dieses Build-Tool wird für die Verwaltung der Backend-Abhängigkeiten verwendet. Installiere Maven gemäß den Anweisungen für dein Betriebssystem.
-- **SQL-Datenbank:** Du benötigst die SQL-Datenbank MariaDB. Stelle sicher, dass sie installiert und betriebsbereit ist, da sie zur Speicherung von Daten verwendet wird.
-- **JavaScript/TypeScript:** Grundlegende Kenntnisse in JavaScript und TypeScript sind erforderlich, da sie für die Entwicklung und Anpassung des Frontends verwendet werden.
-- **SQL:** Grundlegende Kenntnisse in SQL sind erforderlich, da du SQL-Abfragen für die Datenbankverwaltung schreiben musst.
-- **Java:** Grundlegende Kenntnisse in Java sind erforderlich, da du Java Spring Boot für die Entwicklung und Anpassung des Backends verwenden wirst.
+-  **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/))** Du benötigst eine Java-Umgebung. Installiere das JDK gemäß den Anweisungen für dein Betriebssystem.
+- **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))** Diese werden für die Verwaltung der Frontend-Abhängigkeiten benötigt. Installiere Node.js durch npm entsprechend in deinem Betriebssystem.
+- **Maven ([MVN](https://maven.apache.org/install.html)):** Dieses Build-Tool wird für die Verwaltung der Backend-Abhängigkeiten verwendet. Installiere Maven gemäß den Anweisungen für dein Betriebssystem.
+- **SQL-Datenbank([MariaDB](https://www.mariadbtutorial.com/getting-started/install-mariadb/)):** Du benötigst die SQL-Datenbank MariaDB. Stelle sicher, dass sie installiert und betriebsbereit ist, da sie zur Speicherung von Daten verwendet wird.
+- **JavaScript/TypeScript:** Grundlegende Kenntnisse in [JavaScript](https://javascript.info/) und [TypeScript](https://www.typescriptlang.org/docs/) sind erforderlich, da sie für die Entwicklung und Anpassung des Frontends verwendet werden.
+- **SQL:** Grundlegende Kenntnisse in [SQL](https://www.w3schools.com/sql/) sind erforderlich, da du SQL-Abfragen für die Datenbankverwaltung schreiben musst.
+- **Java:** Grundlegende Kenntnisse in [Java](https://www.learnjavaonline.org/) sind erforderlich, da du Java Spring Boot für die Entwicklung und Anpassung des Backends verwenden wirst.
 
 ## Schritte zur Einrichtung und Ausführung der Anwendung ##
 
