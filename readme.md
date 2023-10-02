@@ -1,9 +1,5 @@
 (english translation coming soon)
 
-# ACHTUNG!
-**Diese Anleitung gilt ausschließlich für die Installation des Standalone-Zweigs!**
-Der Hauptzweig (Main-Branch) dient lediglich zur Veranschaulichung. Wenn du das Projekt auf deinem eigenen System zum Laufen bringen möchtest, wechsle bitte zum Standalone-Zweig **(Branch "standalone")** und befolge die Anweisungen unten.
-
 ## Einrichtung und Ausführung des Projekts ##
 
 Diese README-Datei dient dazu, das Projekt ordnungsgemäß auf deinem gewünschten Gerät zum Laufen zu bringen. Es ist wichtig zu beachten, dass die Befehle und Schritte je nach Betriebssystem variieren können. Dieses Projekt ist eher für Benutzer gedacht, die bereits Erfahrung mit Java und JavaScript sowie deren Bibliotheken und Frameworks gesammelt haben.
@@ -55,15 +51,15 @@ Dieser Befehl startet die Spring Boot-Anwendung für das Backend.
 ---
 [Visual Studio Code] (https://code.visualstudio.com/)
 
-Eine plattformübergreifende Code-Editor-Software, die von Microsoft entwickelt wurde und von Entwicklern weltweit für die Programmierung und Entwicklung von Software verwendet wird.
+> Eine plattformübergreifende Code-Editor-Software, die von Microsoft entwickelt wurde und von Entwicklern weltweit für die Programmierung und Entwicklung von Software verwendet wird.
 ---
 [Postman](https://www.postman.com/)
 
-Postman ist ein Entwicklungs- und Testwerkzeug, das speziell dafür entwickelt wurde, API-Schnittstellen zu testen und API-Anfragen zu senden, um deren Funktion und Leistung zu überprüfen.
+> Postman ist ein Entwicklungs- und Testwerkzeug, das speziell dafür entwickelt wurde, API-Schnittstellen zu testen und API-Anfragen zu senden, um deren Funktion und Leistung zu überprüfen.
 ---
 [PhpMyAdmin](https://www.phpmyadmin.net/)
 
-phpMyAdmin ist eine webbasierte Anwendung, die es Benutzern ermöglicht, MySQL-Datenbanken über einen Webbrowser zu verwalten und zu verwalten, indem sie eine grafische Benutzeroberfläche zur Verfügung stellt, um Datenbanken zu erstellen, Tabellen zu bearbeiten, Abfragen auszuführen und andere Datenbankverwaltungsaufgaben durchzuführen.
+> phpMyAdmin ist eine webbasierte Anwendung, die es Benutzern ermöglicht, MySQL-Datenbanken über einen Webbrowser zu verwalten und zu verwalten, indem sie eine grafische Benutzeroberfläche zur Verfügung stellt, um Datenbanken zu erstellen, Tabellen zu bearbeiten, Abfragen auszuführen und andere Datenbankverwaltungsaufgaben durchzuführen.
 ---
 
 **Die Anwendung sollte nun lokal laufen und du kannst sie über deinen Webbrowser aufrufen.**
