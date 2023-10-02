@@ -51,11 +51,20 @@ Starte das Backend, indem du den folgenden Befehl ausführst:
 oder per start-Knopf in deinem IDE (Meistens oben Rechts)
 Dieser Befehl startet die Spring Boot-Anwendung für das Backend.
 
-## Hilfreiche Anwendungen: ##
-| PhpMyAdmin | https://www.phpmyadmin.net/ | phpMyAdmin ist eine webbasierte Anwendung, die es Benutzern ermöglicht, MySQL-Datenbanken über einen Webbrowser zu verwalten und zu verwalten, indem sie eine grafische Benutzeroberfläche zur Verfügung stellt, um Datenbanken zu erstellen, Tabellen zu bearbeiten, Abfragen auszuführen und andere Datenbankverwaltungsaufgaben durchzuführen. |
-| Postman | https://www.postman.com/ | Postman ist ein Entwicklungs- und Testwerkzeug, das speziell dafür entwickelt wurde, API-Schnittstellen zu testen und API-Anfragen zu senden, um deren Funktion und Leistung zu überprüfen. |
-| VSCode | https://code.visualstudio.com/ | Eine plattformübergreifende Code-Editor-Software, die von Microsoft entwickelt wurde und von Entwicklern weltweit für die Programmierung und Entwicklung von Software verwendet wird. |
+**Hilfreiche Anwendungen**
+---
+[Visual Studio Code] (https://code.visualstudio.com/)
 
+Eine plattformübergreifende Code-Editor-Software, die von Microsoft entwickelt wurde und von Entwicklern weltweit für die Programmierung und Entwicklung von Software verwendet wird.
+---
+[Postman](https://www.postman.com/)
+
+Postman ist ein Entwicklungs- und Testwerkzeug, das speziell dafür entwickelt wurde, API-Schnittstellen zu testen und API-Anfragen zu senden, um deren Funktion und Leistung zu überprüfen.
+---
+[PhpMyAdmin](https://www.phpmyadmin.net/)
+
+phpMyAdmin ist eine webbasierte Anwendung, die es Benutzern ermöglicht, MySQL-Datenbanken über einen Webbrowser zu verwalten und zu verwalten, indem sie eine grafische Benutzeroberfläche zur Verfügung stellt, um Datenbanken zu erstellen, Tabellen zu bearbeiten, Abfragen auszuführen und andere Datenbankverwaltungsaufgaben durchzuführen.
+---
 
 **Die Anwendung sollte nun lokal laufen und du kannst sie über deinen Webbrowser aufrufen.**
 **Viel Spaß beim Entwickeln! :D**
