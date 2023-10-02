@@ -49,7 +49,7 @@ Dieser Befehl startet die Spring Boot-Anwendung für das Backend.
 
 **Hilfreiche Anwendungen**
 ---
-[Visual Studio Code] (https://code.visualstudio.com/)
+[Visual Studio Code](https://code.visualstudio.com/)
 
 > Eine plattformübergreifende Code-Editor-Software, die von Microsoft entwickelt wurde und von Entwicklern weltweit für die Programmierung und Entwicklung von Software verwendet wird.
 ---
