@@ -28,7 +28,7 @@ function SearchField() {
     }
     return (
 
-        <form onSubmit={submitForm} className="column is-three-fifths is-offset-one-fifth is-primary">
+        <form onSubmit={submitForm} className="column is-three-fifths is-offset-one-fifth is-primary mb-4">
 
             <div className="control">
                 <input
