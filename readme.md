@@ -5,7 +5,7 @@ This README file is used to get the project running properly on your desired dev
 This repository contains a fullstack application developed using Java Spring Boot for the backend and React for the frontend.
 
 ## System Requirements: ##
-- **Java Development Kit ([JDK:](https://www.oracle.com/de/java/technologies/downloads/)):** You need a Java environment. Install the JDK according to the instructions for your OS.
+- **Java Development Kit ([JDK](https://www.oracle.com/de/java/technologies/downloads/)):** You need a Java environment. Install the JDK according to the instructions for your OS.
 - **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)):** This is needed for managing frontend dependencies. Install Node.js through npm accordingly in your OS.
 - **Maven ([MVN](https://maven.apache.org/install.html)):** This build tool is used for managing backend dependencies. Install Maven according to the instructions for your OS.
 - **SQL database([MariaDB](https://www.mariadbtutorial.com/getting-started/install-mariadb/)):** You will need the SQL database MariaDB. Make sure it is installed and operational as it will be used to store data.
