@@ -1,6 +1,5 @@
 import "./NavBar.scss"
-import { useState, createRef, useEffect } from 'react';
-
+import { createRef, useEffect } from 'react';
 
 function NavBar() {
 
@@ -23,21 +22,13 @@ function NavBar() {
         })
     }, [])
 
-    const [isBurgerActive, setIsDropdownActive] = useState(true);
-
-    const handleDropdownClick = () => {
-        setIsDropdownActive(!isBurgerActive);
-    };
-
     return (
 
         <nav className="navbar is-dark is-transparent is-fixed-top">
             <div className="navbar-brand">
-
                 <a className="navbar-item" href="/">
                     <img src="/favicon.png" height="28"></img>
                 </a>
-
                 <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="burgerDataTarget" ref={burger}>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -71,7 +62,6 @@ function NavBar() {
                 </div>
             </div>
         </nav>
-
     )
 }
 

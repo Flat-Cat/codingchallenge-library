@@ -16,7 +16,6 @@
     //erstelle ein grid
     grid: 1fr/ 0.4fr 1fr;
 }
-
 @include mobile {
     .cardGrid {
         grid-template-columns: 1fr;

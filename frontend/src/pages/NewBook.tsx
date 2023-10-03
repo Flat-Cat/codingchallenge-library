@@ -1,12 +1,11 @@
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SendNewBook from '../api/create';
 import { BookData } from '../api/BookData';
 import InputFields from "../components/InputFields";
 import GoHomeButton from "../components/GoToHomeButton";
 
-
-//_FormEvent: Ereignis wenn ein Form.Element abgesendet wird. enthält inform. über das ausgelöste Ereignis
+//_FormEvent: event when a Form.element is sent. contains inform. about the triggered event.
 function NewBook() {
 
     const pageTitle = "Create a new Entry"
@@ -25,11 +24,11 @@ function NewBook() {
         const target = e.target as HTMLInputElement;
         const name = target.name;
         setData({ ...data, [name]: target.value });
-        // [], da Wert als Schlüssel hier gesehen werden soll, damit wir in das obj. zugreifen können (Namen-wert paar)
+        // [], since value should be seen as the key here so we can access into the obj. (name-value pair).
     }
     const submitForm = (formEvent: FormEvent) => {
         formEvent.preventDefault()
-        //_Default = Get Request + Reload der Seite
+        //_Default = Get Request + page-reload
 
         //___useNavigate_____________________________________________________________________
         SendNewBook(data)
@@ -41,7 +40,6 @@ function NewBook() {
     return (
 
         <div className="container">
-
             <InputFields
                 pageTitle={pageTitle}
                 bookData={data}
@@ -49,18 +47,14 @@ function NewBook() {
                 onSubmitCallback={submitForm}>
 
                 <div>
-                <GoHomeButton></GoHomeButton>
+                    <GoHomeButton></GoHomeButton>
                     <button
                         className="button is-primary mx-2"
                         type="submit">Save
                     </button>
-                 
                 </div>
-
             </InputFields>
-
         </div>
-
     )
 }
 export default NewBook;

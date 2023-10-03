@@ -1,8 +1,6 @@
 import { BookData } from './BookData';
 
-//if(!Data.id) throw Error ("ID is missing");
 function sendUpdatedBook(id:string, data: BookData) {
-
    
         return fetch(`http://localhost:8080/api/v1/books/${id}`, {
             method: "put",
@@ -10,7 +8,6 @@ function sendUpdatedBook(id:string, data: BookData) {
             headers: {
                 "Content-Type": "application/json"
             },
-            
         })
             .then(response => response.json())
              .then((modifiedBookData : BookData) => {

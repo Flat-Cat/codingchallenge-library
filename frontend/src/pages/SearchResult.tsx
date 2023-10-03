@@ -27,13 +27,10 @@ function SearchResult() {
                 console.error("Error: " + error);
             });
     }, [query]);
-    //xx WARUM Query 
-    //xx convoluted reddit
 
     return (
 
         <div className="container">
-
             <div className="column">
                 <div className="columns">
                     <SearchField></SearchField>
@@ -81,9 +78,7 @@ function SearchResult() {
                     </div>
 
                 ))}
-
             </div>
-
         </div>
     )
 }

@@ -3,7 +3,6 @@
     font-size: 1.25rem;
     color: rgb(138, 137, 137)
   }
-  
 .box {
     display: flex;
     justify-content: flex-end;
@@ -16,10 +15,8 @@
     justify-content: flex-end;
     align-items: flex-end; 
     margin-top: 15px
-
     /* Knöpfe sind am unteren Rand ausgerichtet */
 }
-
 @media (max-width: 768px) {
     .box {
         grid-template-columns: 1fr;

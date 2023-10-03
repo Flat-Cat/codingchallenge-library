@@ -1,0 +1,24 @@
+{
+  "name": "codingchallenge-library",
+  "version": "1.0.0",
+  "description": "*German translation below in the text.*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgGreen.bold\" \"cd backend; ./mvnw  spring-boot:run;\" \"cd frontend; npm run dev;\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flat-Cat/codingchallenge-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flat-Cat/codingchallenge-library/issues"
+  },
+  "homepage": "https://github.com/Flat-Cat/codingchallenge-library#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

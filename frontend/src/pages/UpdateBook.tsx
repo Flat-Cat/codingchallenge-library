@@ -27,7 +27,7 @@ function UpdateBook() {
             console.log('error');
         })
     }, [])
-    // Funk.Aufr.[]: Hook wird ausgelöst beim rendern oder bei änderungen in den angegebenen abhängigkeiten
+    //_Function-Call[]: Hook will be triggered on render or on changes in the specified dependencies
     const submitForm = (formEvent: FormEvent) => {
         formEvent.preventDefault()
 
@@ -40,16 +40,15 @@ function UpdateBook() {
         }
     };
     const inputHandler = function (e: ChangeEvent<HTMLInputElement>) {
-        //_FormEvent: Kommt nur von eineme Input feld
+        //_FormEvent: Comes only from one input field
         const target = e.target as HTMLInputElement;
         const name = target.name;
         setData({ ...data, [name]: target.value });
-        // [], da Wert als Schlüssel hier gesehen werden soll, damit wir in das obj. zugreifen können (Namen wert paar)
+        // [] as value should be seen as key here so we can access into the obj. (name value pair)
     }
-    const pageTitle = "Update Book: " + data.title; 
-    // nicht in {} da {} JS Code beinhaltet (JSX)
-    // Direkte Konkatenation in JavaScript-Ausdruck; KONKAT: zwei oder mehr Zeichenketten aneinanderzuhängen.
-
+    const pageTitle = "Update Book: " + data.title;
+    // not in {} since {} contains JS code (JSX).
+    // Direct concatenation in JavaScript expression; CONCAT: concatenate two or more strings
     return (
 
         <div className="container">
@@ -60,12 +59,12 @@ function UpdateBook() {
                 onSubmitCallback={submitForm}>
 
                 <div>
-                <GoHomeButton></GoHomeButton>
+                    <GoHomeButton></GoHomeButton>
                     <button
                         className="button is-primary mx-2"
                         type="submit">Save
                     </button>
-                  
+
                 </div>
 
             </InputFields>

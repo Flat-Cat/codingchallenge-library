@@ -2,17 +2,14 @@ import { ChangeEvent, FormEvent, FunctionComponent, JSX } from "react";
 import { BookData } from '../api/BookData';
 import "./InputFields.scss"
 
-//events geben meistens Void zurück
+//events return mostly void
 interface Props {
     pageTitle: string;
     bookData: BookData
     onSubmitCallback?: (e: FormEvent) => void
     onInputCallBack: (e: ChangeEvent<HTMLInputElement>) => void
     children: JSX.Element
-
 }
-
-//_Hier onsub.callb definiert ein rerror (?)
 
 const InputFields: FunctionComponent<Props> = (props: Props) => {
 

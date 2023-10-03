@@ -42,45 +42,49 @@ function Book() {
     return (
 
         <div className="container">
+
             <div className="column">
                 <h4 className="title is-4 has-text-left has-text-grey-dark">Book Information</h4>
             </div>
 
             <div className="box">
-                <article className="media">
+                <div className="boxGrid">
+                    <article className="media">
 
-                    <figure className="image is-16x24 mr-5 ">
-                        <img src="/BookCover02.jpeg" alt="Placeholder" />
-                    </figure>
-
-                    <div className="media-content">
-                        <div className="content">
-                            <table className='table'><tbody>
-                                <tr>
-                                    <th>Id</th>
-                                    <td>{data.id}</td>
-                                </tr>
-                                <tr>
-                                    <th>Title</th>
-                                    <td>{data.title}</td>
-                                </tr>
-                                <tr>
-                                    <th>Author</th>
-                                    <td>{data.author}</td>
-                                </tr>
-                                <tr>
-                                    <th>Publication Year</th>
-                                    <td>{data.pubYear}</td>
-                                </tr>
-                                <tr>
-                                    <th>ISBN</th>
-                                    <td>{data.isbn}</td>
-                                </tr>
-                            </tbody></table>
+                        <div className="image">
+                            <figure className="image is-16x24 mr-5 ">
+                                <img src="/BookCover02.jpeg" alt="Placeholder" />
+                            </figure>
                         </div>
+                        <div className="media-content">
+                            <div className="content">
+                                <table className='table'><tbody>
+                                    <tr>
+                                        <th>Id</th>
+                                        <td>{data.id}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Title</th>
+                                        <td>{data.title}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Author</th>
+                                        <td>{data.author}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Publication Year</th>
+                                        <td>{data.pubYear}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>ISBN</th>
+                                        <td>{data.isbn}</td>
+                                    </tr>
+                                </tbody></table>
+                            </div>
 
-                    </div>
-                </article>
+                        </div>
+                    </article>
+                </div>
                 <div className="box-footer">
                     <GoHomeButton></GoHomeButton>
                     <button className="button is-danger is-light is-outlined is-pulled-right mt-3 mx-3" onClick={deleteBookButton}>
@@ -97,8 +101,8 @@ function Book() {
                     </button>
 
                 </div>
-            </div>
 
+            </div>
 
         </div>
     )

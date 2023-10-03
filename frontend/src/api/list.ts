@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-
-//Hier musst du evtl Link hinzufügen
+//ToDo: Use the hook on the page, not in the API request
 function listBooks() {
-    //[] => destruktor
-    //interface: def.wie ein obj.aussieht 
+    //_Interface: Defines how the Obj. should look like
     interface Data {
         id: number,
         title: string,
@@ -11,7 +9,6 @@ function listBooks() {
         isbn: string,
         pubYear: number
     }
-    
     const [data, setData] = useState<Data[]>([])
 
     useEffect(() => {
@@ -22,10 +19,10 @@ function listBooks() {
             .then((data: Data[]) => {
 
                 setData(data)
-                // DATA: Leeres array (in der die formatierten Dateien der Arrays Iteriert wurde)
+               // DATA: Empty array (in which the formatted files of the arrays were iterated)
             })
     }, []);
-    //Das Leeres array hier in React = führe es nur einmal aus(hooks)
+//The empty array here in React = execute it only once(hooks)
     return data;
 }
 export default listBooks;

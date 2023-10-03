@@ -10,7 +10,7 @@ function Home() {
     return (
 
         <div className="container">
-             <h4 className="is-size-3 is-family-code has-text-weight-bold is-italic is-3 has-text-grey has-text-centered">Welcome to LibraEye!</h4>
+            <h4 className="is-size-3 is-family-code has-text-weight-bold is-italic is-3 has-text-grey has-text-centered">Welcome to LibraEye!</h4>
             <SearchField></SearchField>
             <div className="cardGrid">
 

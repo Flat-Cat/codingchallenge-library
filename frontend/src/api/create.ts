@@ -1,6 +1,5 @@
 import { BookData } from "./BookData";
 
-//klein schreiben wenn kein obj zurück gegeben wird oder wenn etwas inz. wird.
 function SendNewBook(data: BookData) {
 
         return fetch(`http://localhost:8080/api/v1/books`, {

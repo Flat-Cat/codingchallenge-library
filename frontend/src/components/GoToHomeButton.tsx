@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-
 function GoHomeButton() {
 
     const navigate = useNavigate();
