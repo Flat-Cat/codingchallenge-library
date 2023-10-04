@@ -8,16 +8,15 @@ import "./SearchResult.scss"
 
 function SearchResult() {
 
-    const [noBooksFound, setNoBooksFound] = useState(false);
+
     const [data, setData] = useState<BookData[]>([])
     const { query } = useParams<{ query: string }>();
 
     useEffect(() => {
+    
         search(query)
-
             .then(dbData => {
                 if (dbData.length === 0) {
-                    setNoBooksFound(true);
                     alert("No Books found")
                 } else {
                     setData(dbData);

@@ -4,6 +4,8 @@
 This README file is used to get the project running properly on your desired device. It is important to note that the commands and steps may vary depending on your OS. This project is more intended for users who already have experience with Java and JavaScript and their libraries and frameworks.
 This repository contains a fullstack application developed using Java Spring Boot for the backend and React for the frontend.
 
+![libraeye screenshot](libraeye-screenshot.jpg)
+
 ## System Requirements: ##
 - **Java Development Kit ([JDK](https://www.oracle.com/de/java/technologies/downloads/)):** You need a Java environment. Install the JDK according to the instructions for your OS.
 - **Node Package Manager ([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)):** This is needed for managing frontend dependencies. Install Node.js through npm accordingly in your OS.
