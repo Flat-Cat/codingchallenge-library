@@ -42,23 +42,23 @@ function Book() {
     return (
 
         <div className="container">
+            <h4 className="title is-4 has-text-left has-text-grey-dark">Book Information</h4>
 
-            <div className="column">
-                <h4 className="title is-4 has-text-left has-text-grey-dark">Book Information</h4>
-            </div>
 
-            <div className="box">
-                <div className="boxGrid">
-                    <article className="media">
+            <div className="card">
+                <div className="bookHeader">
+                    {/* ___________Placeholder Image___________ */}
+                    <div className="column">
+                        <figure className="image is-16x24">
+                            <img src="/BookCover02.jpeg" alt="Placeholder" />
+                        </figure>
+                    </div>
 
-                        <div className="image">
-                            <figure className="image is-16x24 mr-5 ">
-                                <img src="/BookCover02.jpeg" alt="Placeholder" />
-                            </figure>
-                        </div>
-                        <div className="media-content">
-                            <div className="content">
-                                <table className='table'><tbody>
+                    {/* ___________Card-Content___________ */}
+                    <div className="column my-4">
+                        <div className="content">
+                            <table className="table">
+                                <tbody>
                                     <tr>
                                         <th>Id</th>
                                         <td>{data.id}</td>
@@ -79,32 +79,31 @@ function Book() {
                                         <th>ISBN</th>
                                         <td>{data.isbn}</td>
                                     </tr>
-                                </tbody></table>
-                            </div>
-
+                                </tbody>
+                            </table>
                         </div>
-                    </article>
+                    </div>
                 </div>
-                <div className="box-footer">
-                    <GoHomeButton></GoHomeButton>
-                    <button className="button is-danger is-light is-outlined is-pulled-right mt-3 mx-3" onClick={deleteBookButton}>
 
+
+                {/* ___________Card-Footer___________ */}
+                <div className="box-footer py-3 px-3">
+
+                    <GoHomeButton></GoHomeButton>
+                    <button className="button is-danger is-light is-outlined mx-3" onClick={deleteBookButton}>
                         <span className="icon">
                             <i className="fas fa-solid fa-trash"></i>
                         </span>
                         <span>Delete</span>
                     </button>
-
-
-
-                    <button className="button is-primary" onClick={changeBook}>Change Book
+                    <button className="button is-primary" onClick={changeBook}>
+                        Change
                     </button>
 
                 </div>
-
             </div>
-
         </div>
+
     )
 }
 export default Book

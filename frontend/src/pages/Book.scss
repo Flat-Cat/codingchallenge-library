@@ -1,12 +1,6 @@
 @import "../variables";
 @import "bulma/sass/utilities/mixins.sass";
 
-
-.box-footer {
-    display: flex;
-    justify-content: flex-end;
-    /* Knopf rechts ausrichten */
-}
 .table th {
     text-align: left !important;
     height: 60px;
@@ -14,51 +8,18 @@
 .table td {
     text-align: left !important;
 }
-.image {
-    width: 250px;
-}
-
-/*
-
-@import "../variables";
-@import "bulma/sass/utilities/mixins.sass";
-
-.boxGrid {
-    display: grid;
-    grid-template-columns: 10fr 10fr;
-    // gap: 16px;
-    // margin-left: 10px;
-    // margin-right: 10px;
-}
-
-.box-footer {
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-.table th {
-    text-align: left !important;
-    height: 60px;
-}
-
-.table td {
-    text-align: left !important;
-}
-
 .image {
     width: 250px;
 }
 
 @include mobile {
-
-   .box .image {
-        width: 150px;
-        order: 1;
+    .box {
+        display: flex;
+        justify-content: center; /* Zentriert horizontal */
+        align-items: center; /* Zentriert vertikal */
     }
-    .tr {
-        order:2;
+    .image {
+        width: 200px;
+        /* Optional: Fügen Sie weitere Stile hinzu, um die Größe und das Aussehen des Bildes anzupassen */
     }
-    
 }
-*/
