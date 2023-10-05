@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-//ToDo: Use the hook on the page, not in the API request
+import { useState} from "react";
+
 function listBooks() {
     //_Interface: Defines how the Obj. should look like
     interface Data {
@@ -11,7 +11,7 @@ function listBooks() {
     }
     const [data, setData] = useState<Data[]>([])
 
-    useEffect(() => {
+  
         fetch(`http://localhost:8080/api/v1/books`, {
             method: "get"
         })
@@ -21,7 +21,6 @@ function listBooks() {
                 setData(data)
                // DATA: Empty array (in which the formatted files of the arrays were iterated)
             })
-    }, []);
 //The empty array here in React = execute it only once(hooks)
     return data;
 }
