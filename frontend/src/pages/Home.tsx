@@ -2,10 +2,18 @@ import listBooks from "../api/list";
 import { Link } from "react-router-dom";
 import "./Home.scss"
 import SearchField from "../components/SearchField";
+import { useEffect, useState } from "react";
+import { BookData } from '../api/BookData';
 
 function Home() {
 
-    const data = listBooks();
+    const [data, setData] = useState<BookData[]>([])
+
+    useEffect(() => {
+        listBooks().then((data) => {
+            setData(data);
+        })
+    }, [])
 
     return (
 

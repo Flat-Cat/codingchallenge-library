@@ -5,7 +5,7 @@ import { BookData } from '../api/BookData';
 import InputFields from "../components/InputFields";
 import GoHomeButton from "../components/GoToHomeButton";
 
-//_FormEvent: event when a Form.element is sent. contains inform. about the triggered event.
+//_FormEvent: event when a Form-element is sent. contains inform. about the triggered event.
 function NewBook() {
 
     const pageTitle = "Create a new Entry"

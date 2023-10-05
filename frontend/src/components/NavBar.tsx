@@ -1,5 +1,6 @@
 import "./NavBar.scss"
 import { createRef, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 function NavBar() {
 
@@ -38,12 +39,9 @@ function NavBar() {
 
             <div id="burgerDataTarget" className="navbar-menu">
                 <div className="navbar-start">
-                    <a className="navbar-item" href="/">
-                        Home
-                    </a>
-                    <a className="navbar-item" href="/new">
-                        Create a new Entry
-                    </a>
+                    <Link className="navbar-item" to={"/"}>Home</Link>
+                    <Link className="navbar-item" to={"/new"}>  Create a new Entry</Link>
+
                     <div className="navbar-item has-dropdown is-hoverable">
                         <a className="navbar-link">
                             About
