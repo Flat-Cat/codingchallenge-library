@@ -47,12 +47,12 @@ function NavBar() {
                             About
                         </a>
                         <div className="navbar-dropdown is-boxed">
-                            <a className="navbar-item" href="https://flatcat.netlify.app/">
+                            <a className="navbar-item" href="https://flatcat.netlify.app/" target="_blank">
                                 Developer
                             </a>
 
                             <hr className="navbar-divider" />
-                            <a className="navbar-item" href="https://github.com/Flat-Cat/codingchallenge-library/">
+                            <a className="navbar-item" href="https://github.com/Flat-Cat/codingchallenge-library/" target="_blank">
                                 Project
                             </a>
                         </div>
