@@ -7,6 +7,10 @@
 -- Server-Version: 10.3.38-MariaDB-0ubuntu0.20.04.1
 -- PHP-Version: 7.4.3-4ubuntu2.19
 
+-- Datebank "book_library" Erstellen und verwenden. 
+CREATE DATABASE IF NOT EXISTS `book_library`;
+USE `book_library`;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
