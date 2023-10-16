@@ -7,14 +7,14 @@ This repository contains a fullstack application developed using Java Spring Boo
 ![libraeye screenshot](libraeye-screenshot.jpg)
 
 This project uses Java version 17.0.8 and Node version 20.8.1.
-- To display your current Java version, execute ``$ java --version``
-- To check your current node version, use ```$ node -v```
+- To display your current Java version, run ``$ java --version``
+- To check your current node version, run ```$ node -v```
 
 By installing NVM (Node Version Manager) you can install and select different Node versions.
 
 **If you already have NVM installed, you can use the following commands:** 
 - To install the latest Node version, run ```$ nvm install latest```
-- To use node version 20.8.1, use ```$ nvm use 20.8.1```
+- To use node version 20.8.1, run ```$ nvm use 20.8.1```
 
 ## System Requirements: ##
 - **Java Development Kit ([JDK](https://www.oracle.com/de/java/technologies/downloads/)):** You need a Java environment. Install the JDK according to the instructions for your OS.
@@ -39,7 +39,7 @@ frameworks like  [Bulma](https://bulma.io/) and [React](https://react.dev/).**
 4. Install [Java Spring Boot](https://spring.io/projects/spring-boot) on your system. 
 5. Import the `books.sql` file into your MariaDB database. The SQL file is located in the directory **backend/src/main/resources/sql/books.sql.**.
 
-To upload the books.sql file to your MariaDB database, open (ex)phpMyAdmin and click on the "Import" tab at the top. Here you can select the books.sql file and start the import process. The SQL file automatically creates the database, uses it and fills a table with book data, including author name, title, year of publication and ISBN.
+To upload the books.sql file to your MariaDB database, open (example)phpMyAdmin and click on the "Import" tab at the top. Here you can select the books.sql file and start the import process. The SQL file automatically creates the database, uses it and fills a table with book data, including author name, title, year of publication and ISBN.
 
 6. Modify the example.application.properties file in "backend\src\main\resources\application.properties", by replacing it with your database username and password. Delete "example" from the example.application.properties file name.This file contains the database configuration for the backend.
 7. To switch to the Backend directory, first navigate back to the main directory using the command ```$ cd ..``` and then enter the Backend directory using ```$ cd backend```
@@ -53,7 +53,7 @@ To upload the books.sql file to your MariaDB database, open (ex)phpMyAdmin and c
 
 **This command starts the development servers for the frontend.**
 
-10. Start the backend by running the following command: 
+10. Start the backend by changing to the backend directory and running the following command: 
 
 ```$ mvn spring-boot:run```
 
@@ -133,7 +133,7 @@ Um die Datei books.sql in Ihre MariaDB-Datenbank hochzuladen, öffnen Sie (bsp)p
 
 **Dieser Befehl startet die Entwicklungsserver für das Frontend.**
 
-10. Starte das Backend, indem du den folgenden Befehl ausführst: 
+10. Starte das Backend, indem du in das Backend-Verzeichnis wechselst und den folgenden Befehl ausführst: 
 ```$ mvn spring-boot:run```
 
 oder per start-Knopf in deinem IDE (Meistens oben Rechts)
